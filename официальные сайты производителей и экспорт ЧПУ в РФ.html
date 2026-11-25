@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Справочник оборудования ООО «Ланфан Дафа Моулд» — официальные сайты производителей и экспорт в РФ</title>
+<style>
+:root{
+  --ok:#1b7f3a; --lim:#b8860b; --no:#b3261e; --nd:#6b7280;
+  --ink:#1f2328; --line:#dde2ea; --bg:#f5f6f8; --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 -apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+header{background:linear-gradient(135deg,#10243e,#1d3d63);color:#fff;padding:34px 0}
+header h1{font-size:25px;margin:0 0 10px;line-height:1.28}
+header p{margin:4px 0;color:#cfdcec;font-size:14.5px}
+h2{font-size:21px;margin:38px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:16.5px;margin:0;line-height:1.3}
+h4{font-size:15px;margin:18px 0 6px}
+a{color:#1d5fbf;text-decoration:none;word-break:break-all}
+a:hover{text-decoration:underline}
+nav.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 20px 16px;margin:22px 0}
+nav.toc ul{columns:2;column-gap:30px;margin:8px 0 0;padding-left:20px}
+nav.toc li{margin:3px 0;font-size:14.5px}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap;color:#fff}
+.b-ok{background:var(--ok)}.b-lim{background:var(--lim)}.b-no{background:var(--no)}.b-nd{background:var(--nd)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 0;align-items:center;font-size:13.8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(390px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 17px}
+.card-head{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+.meta{font-size:12.6px;color:#5b6472;margin:0 0 8px}
+.card p{margin:7px 0;font-size:14.2px}
+.links{margin:10px 0 4px;border-top:1px dashed #e2e7ee;padding-top:10px}
+.linkrow{display:grid;grid-template-columns:1fr auto;gap:6px 8px;padding:8px 0;border-bottom:1px solid #f0f2f6}
+.linkrow:last-child{border-bottom:none}
+.linkrow .u{grid-column:1/-1;font-size:13.4px}
+.linkrow .d{font-size:12.6px;color:#5b6472}
+.linkrow .r{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.st{font-size:11.5px;padding:1px 7px;border-radius:999px;border:1px solid;white-space:nowrap}
+.st-ok{color:#14532d;border-color:#8ac79c;background:#eaf7ee}
+.st-chk{color:#7c4a03;border-color:#e3c07a;background:#fdf5e4}
+.st-no{color:#4b5563;border-color:#c7ccd4;background:#f1f2f4}
+button{font-family:inherit;font-size:13px;padding:6px 10px;border-radius:8px;border:1px solid #c9d0da;background:#fff;color:var(--ink);cursor:pointer}
+button:hover{background:#eef4fb}
+button.copy{border-color:#9db6d8;color:#14406e;background:#f2f7fd;white-space:nowrap}
+button.copy.ok{border-color:#8ac79c;background:#eaf7ee;color:#14532d}
+button.mini{padding:2px 6px;font-size:12px}
+.card-actions{margin:10px 0 2px}
+.toolbar{position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;align-items:center}
+select,input[type=search]{padding:8px 11px;border:1px solid #c9d0da;border-radius:8px;font-size:14px;background:#fff;font-family:inherit}
+#fCount{font-size:13.5px;color:#5b6472}
+.tbl-scroll{overflow:auto;max-height:680px;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:13.3px}
+th,td{border-bottom:1px solid #e6eaf0;padding:7px 9px;text-align:left;vertical-align:top}
+thead th{background:#10243e;color:#fff;cursor:pointer;position:sticky;top:0;font-size:13px;white-space:nowrap}
+thead th::after{content:" ⇅";opacity:.45;font-size:11px}
+thead th[data-dir="asc"]::after{content:" ▲";opacity:.9}
+thead th[data-dir="desc"]::after{content:" ▼";opacity:.9}
+tbody tr:nth-child(even){background:#fafbfc}
+tbody tr:hover{background:#eef4fb}
+.warn{background:#fff8e6;border-left:4px solid #e0a800;padding:10px 14px;border-radius:0 8px 8px 0;font-size:14px;margin:14px 0}
+ul.tight{margin:6px 0;padding-left:22px}
+ul.tight li{margin:3px 0;font-size:14.3px}
+#toast{position:fixed;right:18px;bottom:18px;background:#10243e;color:#fff;padding:11px 16px;border-radius:9px;font-size:14px;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+#toast.show{opacity:1;transform:translateY(0)}
+footer{background:#10243e;color:#c7d5e6;margin-top:40px;padding:22px 0;font-size:13.5px}
+@media(max-width:760px){nav.toc ul{columns:1}.cards{grid-template-columns:1fr}header h1{font-size:21px}.linkrow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Официальные сайты производителей оборудования ООО «Ланфан Дафа Моулд»</h1>
+    <p>81 единица оборудования · 15 категорий · 50 карточек производителей · рабочие ссылки, статусы проверки и кнопки копирования</p>
+    <p>Дата проверки ссылок и данных: <b>24.11.2026</b>. Документ работает офлайн (внешние ресурсы не подключаются).</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h4>Оглавление</h4>
+  <ul>
+    <li><a href="#intro">1. Как пользоваться справочником</a></li>
+    <li><a href="#legend">2. Легенда статусов ссылок и экспорта</a></li>
+    <li><a href="#machining">3. Обрабатывающие центры</a></li>
+    <li><a href="#metrology">4. Контрольно-измерительное оборудование</a></li>
+    <li><a href="#threading">5. Резьбонарезное и сверлильное оборудование</a></li>
+    <li><a href="#edm">6. Электроэрозионное оборудование</a></li>
+    <li><a href="#wedm">7. Проволочно-вырезное оборудование</a></li>
+    <li><a href="#cutting">8. Режущее и металлообрабатывающее оборудование</a></li>
+    <li><a href="#welding">9. Сварочное оборудование</a></li>
+    <li><a href="#other">10. Прочее оборудование</a></li>
+    <li><a href="#polishing">11. Полировальное, пескоструйное, пылегазоочистное</a></li>
+    <li><a href="#drying">12. Сушильное оборудование</a></li>
+    <li><a href="#coating">13. Окрасочное оборудование</a></li>
+    <li><a href="#molding">14. Литьевое оборудование</a></li>
+    <li><a href="#mixing">15. Смесительное оборудование</a></li>
+    <li><a href="#lifting">16. Грузоподъёмное оборудование</a></li>
+    <li><a href="#ecology">17. Экологическое оборудование</a></li>
+    <li><a href="#table">18. Сводная таблица (фильтры, сортировка, копирование)</a></li>
+    <li><a href="#method">19. Методология и источники</a></li>
+    <li><a href="#disclaimer">20. Ограничение ответственности</a></li>
+  </ul>
+</nav>
+
+<h2 id="intro">1. Как пользоваться справочником</h2>
+<div class="card">
+<p><b>Что внутри.</b> Карточки сгруппированы по категориям и по <i>производителю</i>: одна карточка = один изготовитель и все позиции каталога, которые к нему относятся (это избавляет от дублирования одинаковых ссылок по 81 строке).</p>
+<p><b>Блок «Официальные ссылки».</b> Для каждого изготовителя указаны только те адреса, существование которых подтверждено. Формат строки: URL → что находится по ссылке → дата проверки → статус. Если страница не найдена, она не выдумывается: стоит пометка «страница не найдена», а при отсутствии сайта — поисковая ссылка.</p>
+<p><b>Кнопки копирования.</b> «📋 Копировать» — копирует один URL; «📋 Копировать все ссылки производителя» — все URL карточки; «📋 Копировать все ссылки справочника» — единый список (по одному URL в строке, без дублей). Работает и при открытии файла по <code>file://</code> (fallback через скрытый textarea).</p>
+<p><b>Важно.</b> Домен подтверждается только там, где он получен из открытых источников в ходе проверки. Для мелких китайских заводов официальные сайты часто отсутствуют — это зафиксировано честно, а не заменено «правдоподобным» адресом.</p>
+</div>
+
+<h2 id="legend">2. Легенда статусов ссылок и экспорта</h2>
+<div class="card">
+<h4>Статусы ссылок</h4>
+<div class="legend">
+  <span class="st st-ok">проверено</span> — домен/страница подтверждены в открытых источниках, адрес открывается;
+  <span class="st st-chk">требует проверки</span> — домен общеизвестен для этого изготовителя, но конкретная страница или актуальность адреса не подтверждена;
+  <span class="st st-no">не найдено</span> — официальный сайт или страница отсутствуют / не обнаружены.
+</div>
+<h4 style="margin-top:16px">Статусы экспорта в Российскую Федерацию</h4>
+<div class="legend">
+  <span class="badge b-ok">экспорт возможен</span> — изготовитель в КНР/иной юрисдикции, товар не в контрольных списках, запрета на поставку в РФ нет;
+  <span class="badge b-lim">ограничен / через посредников</span> — формально возможно, но действуют корпоративные запреты, списки ЕС/Японии либо высокий риск для платёжного канала;
+  <span class="badge b-no">экспорт затруднён</span> — прямой экспорт запрещён (EAR США, Регламент ЕС 833/2014, меры METI), реэкспорт требует лицензии;
+  <span class="badge b-nd">данных нет</span> — изготовитель или товарная позиция не идентифицированы.
+</div>
+<div class="warn"><b>Правовая оговорка по ссылкам.</b> Открытие сайта не означает отсутствия ограничений: принадлежность к группе (например, Serein → Hexagon, Mazak Liaoning → Yamazaki Mazak) определяет корпоративную политику в отношении РФ важнее, чем страна сборки.</div>
+</div>
+
+<div class="toolbar">
+  <button class="copy" data-copy-all="1">📋 Копировать все ссылки справочника</button>
+  <span style="font-size:13px;color:#5b6472">Собирает все URL документа в один список (по одному в строке, без повторов)</span>
+</div>
+
+<h2 id="machining">3. Обрабатывающие центры</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Haas Automation, Inc. — США</h3><span class="badge b-no">экспорт затруднён</span></div>
+<p class="meta">Позиция каталога: зав. № 01 — Haas UMC-1000SS (5-осевой универсальный ОЦ). Производитель по каталогу: «Hass Automation, Inc.» (США).</p>
+<p><b>Применение.</b> 3+2 и одновременная 5-осевая обработка корпусных деталей среднего и крупного размера: автокомпоненты (ГБЦ, рычаги, корпуса турбин), авиационно-космические и оборонные детали, медицинская техника, гидравлика, пресс-формы и электроды, технологическая оснастка.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.haascnc.com/" target="_blank" rel="noopener noreferrer">https://www.haascnc.com/</a></div>
+    <div class="d">Официальный сайт (главная страница)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.haascnc.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://haascnc.com/machines/vertical-mills/universal-machine/models/umc-1000ss" target="_blank" rel="noopener noreferrer">https://haascnc.com/machines/vertical-mills/universal-machine/models/umc-1000ss</a></div>
+    <div class="d">Страница модели UMC-1000SS (5-осевой универсальный центр)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://haascnc.com/machines/vertical-mills/universal-machine/models/umc-1000ss">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://haascnc.com/pre-install-guide/umc-1000ss" target="_blank" rel="noopener noreferrer">https://haascnc.com/pre-install-guide/umc-1000ss</a></div>
+    <div class="d">Руководство по подготовке площадки под UMC-1000SS (требования к фундаменту, электропитанию, воздуху, СОЖ)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://haascnc.com/pre-install-guide/umc-1000ss">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.haas.co.uk/machines/umc-1000ss/" target="_blank" rel="noopener noreferrer">https://www.haas.co.uk/machines/umc-1000ss/</a></div>
+    <div class="d">Европейское представительство Haas (Великобритания) — страница модели, удобна для запроса об экспорте</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.haas.co.uk/machines/umc-1000ss/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Haas+Automation+contact+international+sales" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Haas+Automation+contact+international+sales</a></div>
+    <div class="d">Страница контактов/международных продаж — отдельный URL не подтверждён, поисковая ссылка</div>
+    <div class="r"><span class="st st-chk">требует проверки</span><button class="copy" data-copy="https://www.google.com/search?q=Haas+Automation+contact+international+sales">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Официальная страница на русском языке / для России</div>
+    <div class="d">Страница не найдена: русскоязычного раздела и представительства в РФ нет</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Затруднён. 5-осевые ОЦ — ECCN 2B001 (EAR, 15 CFR 774); для РФ действуют §746.8 и «Common High Priority List» (коды 8456–8466). Поставки прекращены с 2022 г., официального дистрибьютора в РФ нет. Канал — только параллельный импорт с высокой вероятностью отказа BIS в реэкспорте.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: haascnc.com; bis.doc.gov (EAR); eur-lex.europa.eu (Регламент 833/2014).</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>DMG MORI (торговое юрлицо в КНР) — Германия/Япония</h3><span class="badge b-no">экспорт затруднён</span></div>
+<p class="meta">Позиция каталога: зав. № 02 — DMG duoBLOCK «80100». Производитель по каталогу: DMG MORI Machine Tool Trading Co., Ltd. (Шанхай, КНР).</p>
+<p><b>Применение.</b> Тяжёлое фрезерование крупногабаритных корпусных деталей и пресс-форм, пятисторонняя обработка, 5-осевая интерполяция, обработка наклонных отверстий и поднутрений; отрасли — крупные пресс-формы, авиастроение, энергетика, гидравлика, медицинская техника.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.dmgmori.com/" target="_blank" rel="noopener noreferrer">https://www.dmgmori.com/</a></div>
+    <div class="d">Официальный сайт группы DMG MORI (главная страница)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.dmgmori.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=DMG+MORI+duoBLOCK+DMU+80+P+official+site" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=DMG+MORI+duoBLOCK+DMU+80+P+official+site</a></div>
+    <div class="d">Страница серии duoBLOCK — прямой URL не подтверждён; обозначение «80100» в публичной номенклатуре не найдено</div>
+    <div class="r"><span class="st st-chk">требует проверки</span><button class="copy" data-copy="https://www.google.com/search?q=DMG+MORI+duoBLOCK+DMU+80+P+official+site">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Контакты / международные продажи</div>
+    <div class="d">Страница контактов: отдельный подтверждённый URL не зафиксирован — переход из верхнего меню dmgmori.com</div>
+    <div class="r"><span class="st st-chk">требует проверки</span></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Русскоязычная страница / представительство в РФ</div>
+    <div class="d">Страница не найдена: деятельность в РФ прекращена в 2022 г.</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Затруднён. Позиции 8457–8461 ТН ВЭД входят в Приложение XXIII к Регламенту (ЕС) 833/2014; запрет действует с 2022 г. и расширен пакетами, включая Регламент (ЕС) 2024/1745. Канал — только параллельный импорт (КНР, Турция, ОАЭ).</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: dmgmori.com; eur-lex.europa.eu.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Yamazaki Mazak Machine Tool (Liaoning) Co., Ltd. — Китай (группа Mazak, Япония)</h3><span class="badge b-lim">ограничен / через посредников</span></div>
+<p class="meta">Позиция каталога: зав. № 03 — Mazak QTE-100MYL (токарно-фрезерный центр с осью Y).</p>
+<p><b>Применение.</b> Токарная обработка с внецентровым фрезерованием, сверлением и нарезанием резьбы за один устано: детали «диск–вал», гидравлика, автокомпоненты, авиационные и медицинские детали; удлинённая станина, задняя бабка, 12-позиционный приводной инструмент.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.mazak.com/" target="_blank" rel="noopener noreferrer">https://www.mazak.com/</a></div>
+    <div class="d">Официальный сайт Yamazaki Mazak Corporation (главная страница)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.mazak.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.mazak.com/us-en/products/qte/" target="_blank" rel="noopener noreferrer">https://www.mazak.com/us-en/products/qte/</a></div>
+    <div class="d">Страница серии QTE (включая модели с осью Y, характеристики, компоновка)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.mazak.com/us-en/products/qte/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.mazak.com/uk-en/products/qt-compact/" target="_blank" rel="noopener noreferrer">https://www.mazak.com/uk-en/products/qt-compact/</a></div>
+    <div class="d">Европейский сегмент сайта — родственная линейка QT-COMPACT (данные по Y-оси, второму шпинделю)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.mazak.com/uk-en/products/qt-compact/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Китайский / русскоязычный раздел</div>
+    <div class="d">Отдельные подтверждённые URL (mazak.com.cn и русская версия) не зафиксированы — проверять переходом с mazak.com</div>
+    <div class="r"><span class="st st-chk">требует проверки</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Ограничен. Станок собран в КНР (Далянь), но группа Mazak прекратила работу в РФ, а меры METI (Япония) запрещают вывоз станков и систем ЧПУ в РФ. Практика: отгрузка с китайской площадки требует согласования с головным офисом. Канал — китайский посредник при наличии разрешения завода.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: mazak.com; meti.go.jp.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Ningxia Little Giant Machine Tool Co., Ltd. — Китай</h3><span class="badge b-lim">ограничен / через посредников</span></div>
+<p class="meta">Позиции каталога: зав. № 05, 06 — Mazak QSM200L/500 (токарные с ЧПУ).</p>
+<p><b>Применение.</b> Токарная обработка тел вращения (валы, фланцы, втулки, кольца), серийное производство деталей оснастки и пресс-форм.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.mazak.com/" target="_blank" rel="noopener noreferrer">https://www.mazak.com/</a></div>
+    <div class="d">Сайт группы Mazak — корпоративная страница предприятия (собственный домен завода не подтверждён)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.mazak.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=%22Ningxia+Little+Giant+Machine+Tool%22+official+website" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=%22Ningxia+Little+Giant+Machine+Tool%22+official+website</a></div>
+    <div class="d">Поиск официального сайта завода (СП Mazak и Ningxia Great Wall Machinery Group, открыто в 2000 г.)</div>
+    <div class="r"><span class="st st-chk">требует проверки</span><button class="copy" data-copy="https://www.google.com/search?q=%22Ningxia+Little+Giant+Machine+Tool%22+official+website">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Русскоязычная страница</div>
+    <div class="d">Не найдена</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Ограничен: китайское юрлицо и площадка, но бренд Mazak → действует политика группы и японские ограничения. Канал — прямой контракт с китайским юрлицом + проверка сертификата происхождения.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Taizhou Modern CNC Machine Tool Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 07, 08, 09 (T5), 11 (T6 ОЦ), 12–15 (T6 сверлильно-резьбонарезной), 16, 17 (VML855), 18 (850) — всего 12 единиц.</p>
+<p><b>Применение.</b> Вертикальная фрезерная обработка корпусных деталей, плит, фланцев, деталей пресс-форм и оснастки; серийное сверление и нарезание резьбы на станках T6.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка для проверки профиля завода (Тайчжоу, Цзянсу)</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.made-in-china.com/" target="_blank" rel="noopener noreferrer">https://www.made-in-china.com/</a></div>
+    <div class="d">Отраслевой каталог Made-in-China — поиск карточки поставщика по названию завода</div>
+    <div class="r"><span class="st st-ok">проверено (домен) · 24.11.2026</span><button class="copy" data-copy="https://www.made-in-china.com/">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую: оборудование общего назначения (не 5-осевое, не прецизионное), в контрольные списки не входит. Ограничения неправового характера — комплаенс банков КНР и логистика. Рекомендация: прямой контракт, оплата в CNY, сертификация ТР ТС 010/2011.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Shenzhen Juren CNC Equipment Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 10 — вертикальный ОЦ «T5» (поставщик — шэньчжэньское юрлицо).</p>
+<p><b>Применение.</b> Мелко- и среднегабаритная фрезерная обработка деталей оснастки, корпусов, плит.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Shenzhen+Juren+CNC+Equipment+Co+Ltd+official+website" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Shenzhen+Juren+CNC+Equipment+Co+Ltd+official+website</a></div>
+    <div class="d">Официальный сайт не подтверждён; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Shenzhen+Juren+CNC+Equipment+Co+Ltd+official+website">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен. Оборудование общего назначения; вероятна перепродажа/сборка — требуется сверка по шильде.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Ningbo Minsheng Machinery Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 19 («2812524»), 20 (20150A) — гравировально-фрезерные станки с ЧПУ.</p>
+<p><b>Применение.</b> Прецизионная гравировка и фрезерование электродов, мелких деталей пресс-форм, модельной оснастки, литейных моделей.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Ningbo+Minsheng+Machinery+Co+Ltd+official+website" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Ningbo+Minsheng+Machinery+Co+Ltd+official+website</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Ningbo+Minsheng+Machinery+Co+Ltd+official+website">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://s.1688.com/" target="_blank" rel="noopener noreferrer">https://s.1688.com/</a></div>
+    <div class="d">1688.com — поиск карточки поставщика по названию (проверять вручную)</div>
+    <div class="r"><span class="st st-chk">требует проверки · 24.11.2026</span><button class="copy" data-copy="https://s.1688.com/">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен. Ограничений по товарной позиции нет; «2812524» — вероятно серийный номер, а не модель.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="metrology">4. Контрольно-измерительное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Serein Metrology (Shenzhen) Co., Ltd. — Китай (группа Hexagon)</h3><span class="badge b-lim">ограничен / через посредников</span></div>
+<p class="meta">Позиция каталога: зав. № 001 — КИМ Croma Classic686.</p>
+<p><b>Применение.</b> Контроль размеров и геометрических допусков пресс-форм, механически обработанных и прецизионных деталей: координаты отверстий, круглость, плоскостность, перпендикулярность, профиль, сравнение с 3D-моделью.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.serein.com.cn/" target="_blank" rel="noopener noreferrer">https://www.serein.com.cn/</a></div>
+    <div class="d">Официальный сайт производителя (китайская версия)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.serein.com.cn/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.serein.com.cn/en" target="_blank" rel="noopener noreferrer">https://www.serein.com.cn/en</a></div>
+    <div class="d">Англоязычная версия — координатно-измерительные машины,影像-системы, обучение и сервис</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.serein.com.cn/en">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://hexagon.com/company/divisions/manufacturing-intelligence/local-partner-certificates" target="_blank" rel="noopener noreferrer">https://hexagon.com/company/divisions/manufacturing-intelligence/local-partner-certificates</a></div>
+    <div class="d">Страница Hexagon Manufacturing Intelligence — подтверждает площадку China – Shenzhen (Serein) в сети группы</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://hexagon.com/company/divisions/manufacturing-intelligence/local-partner-certificates">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Страница модели Croma Classic 686</div>
+    <div class="d">Прямой URL на карточку модели не подтверждён — искать в разделе продукции serein.com.cn</div>
+    <div class="r"><span class="st st-chk">требует проверки</span></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Русскоязычная страница</div>
+    <div class="d">Не найдена</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Ограничен: КИМ прецизионного класса могут попадать под ECCN 2B006 (США) и аналогичные позиции ЕС; Hexagon прекратила поставки в РФ в 2022 г. Закупка возможна напрямую у китайского юрлица Serein при подтверждении происхождения и отсутствии прецизионного контроля.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: serein.com.cn; hexagon.com.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Qingdao Fengyinhang Trading Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 002 — профилометр (измеритель шероховатости) K01523032802.</p>
+<p><b>Применение.</b> Контроль параметров шероховатости после фрезерования, шлифования и полирования деталей пресс-форм.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Qingdao+Fengyinhang+Trading+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Qingdao+Fengyinhang+Trading+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден (торговое юрлицо, не изготовитель); поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Qingdao+Fengyinhang+Trading+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен: портативные приборы контроля шероховатости в контрольные списки не входят. Фактический OEM не идентифицирован.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Shanghai Kaiyan Testing Instrument Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 003 — твердомер Либа YDJ220711016309.</p>
+<p><b>Применение.</b> Неразрушающий контроль твёрдости крупных деталей, штамповых и конструкционных сталей после термообработки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Shanghai+Kaiyan+Testing+Instrument+Co+Ltd+official" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Shanghai+Kaiyan+Testing+Instrument+Co+Ltd+official</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Shanghai+Kaiyan+Testing+Instrument+Co+Ltd+official">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; при использовании в целях контроля требуется внесение в реестр СИ РФ и калибровка.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Beijing Saiboruixin Technology Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 004 — толщиномер покрытий XCT330S.</p>
+<p><b>Применение.</b> Контроль толщины лакокрасочных, гальванических и порошковых покрытий.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Beijing+Saiboruixin+Technology+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Beijing+Saiboruixin+Technology+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Beijing+Saiboruixin+Technology+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Guangdong 3nh Technology Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 005 — колориметр (спектрофотометр) NR60CP.</p>
+<p><b>Применение.</b> Инструментальный контроль цвета и цветового различия пластиковых изделий, окрашенных деталей, образцов (ΔE).</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.3nh.com/" target="_blank" rel="noopener noreferrer">https://www.3nh.com/</a></div>
+    <div class="d">Официальный сайт (главная страница)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.3nh.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.3nh.com/en/" target="_blank" rel="noopener noreferrer">https://www.3nh.com/en/</a></div>
+    <div class="d">Англоязычная версия — спектрофотометры, колориметры, измерители глянца</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.3nh.com/en/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.3nh.com/en/product/-127.html" target="_blank" rel="noopener noreferrer">https://www.3nh.com/en/product/-127.html</a></div>
+    <div class="d">Раздел продукции: спектрофотометры / колориметры (обзор каталога приборов)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.3nh.com/en/product/-127.html">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Страница модели NR60CP</div>
+    <div class="d">Прямой URL карточки NR60CP не подтверждён; на сайте есть PDF-описания приборов серии NR</div>
+    <div class="r"><span class="st st-chk">требует проверки</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: 3nh.com.</p>
+</article>
+
+</div>
+
+<h2 id="threading">5. Резьбонарезное и сверлильное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Tianjin Jiaming Electromechanical Technology Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0001 — универсальная (шарнирная) резьбонарезная машина M6–M30.</p>
+<p><b>Применение.</b> Нарезание резьбы M6–M30 в корпусных деталях, пресс-формах и оснастке, в том числе в труднодоступных местах.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Tianjin+Jiaming+Electromechanical+Technology+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Tianjin+Jiaming+Electromechanical+Technology+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Tianjin+Jiaming+Electromechanical+Technology+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Hangzhou Xihu Bench Drill Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 0002–0004 (SWJ-6B), 0005 (SWJ-7B), 0007–0012 (2512B) — 9 единиц.</p>
+<p><b>Применение.</b> Нарезание резьбы и сверление отверстий в мелких деталях, оснастке, электродах; слесарно-инструментальный участок.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Hangzhou+Xihu+Bench+Drill+Co+Ltd+official" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Hangzhou+Xihu+Bench+Drill+Co+Ltd+official</a></div>
+    <div class="d">Официальный сайт не подтверждён; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Hangzhou+Xihu+Bench+Drill+Co+Ltd+official">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.made-in-china.com/" target="_blank" rel="noopener noreferrer">https://www.made-in-china.com/</a></div>
+    <div class="d">Отраслевой каталог — поиск карточки поставщика настольных станков</div>
+    <div class="r"><span class="st st-ok">проверено (домен) · 24.11.2026</span><button class="copy" data-copy="https://www.made-in-china.com/">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; оборудование широко представлено на рынках СНГ.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Shenyang Zhongjie Machine Tool Works (Shenyang Machine Tool Group) — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0006 — радиально-сверлильный станок Z3050×16/1.</p>
+<p><b>Применение.</b> Сверление, зенкование, развёртывание и нарезание резьбы в крупногабаритных корпусных деталях, плитах, деталях пресс-форм.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Shenyang+Machine+Tool+Group+official+website" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Shenyang+Machine+Tool+Group+official+website</a></div>
+    <div class="d">Поиск сайта группы (собственный домен завода Zhongjie не подтверждён)</div>
+    <div class="r"><span class="st st-chk">требует проверки · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Shenyang+Machine+Tool+Group+official+website">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; при ввозе — ТР ТС 010/2011, при установке на фундамент — проект и допуск персонала.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="edm">6. Электроэрозионное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Taizhou Jiangzhou Machine Tool Works — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0013 — прошивочный электроэрозионный станок Dm7132.</p>
+<p><b>Применение.</b> Прошивка полостей и глухих карманов в пресс-формах, обработка электродов, закалённых сталей и твердосплавных вставок.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Taizhou+Jiangzhou+Machine+Tool+Works+EDM" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Taizhou+Jiangzhou+Machine+Tool+Works+EDM</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Taizhou+Jiangzhou+Machine+Tool+Works+EDM">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую: электроэрозионные станки общего назначения в контрольные позиции 2B001 не входят.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Suzhou Xinhua Machine Tool Works — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 0014, 0015 — электроэрозионные станки ZNC-450.</p>
+<p><b>Применение.</b> Прошивание полостей пресс-форм и штампов, обработка сложных внутренних контуров, электродная обработка.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Suzhou+Xinhua+Machine+Tool+Works+EDM+ZNC" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Suzhou+Xinhua+Machine+Tool+Works+EDM+ZNC</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Suzhou+Xinhua+Machine+Tool+Works+EDM+ZNC">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений не выявлено.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="wedm">7. Проволочно-вырезное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>FANUC Corporation — Япония</h3><span class="badge b-no">экспорт затруднён</span></div>
+<p class="meta">Позиция каталога: зав. № 04 — FANUC ROBOCUT «α-C00iC» (вероятно α-C600iC).</p>
+<p><b>Применение.</b> Прецизионная вырезка сложных контуров: малые пресс-формы, точные штампы, медицинские детали, микродатчики, вырезка PCD и твердосплавного инструмента, тонкостенные детали.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.fanuc.co.jp/" target="_blank" rel="noopener noreferrer">https://www.fanuc.co.jp/</a></div>
+    <div class="d">Официальный сайт FANUC Corporation (Япония)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.fanuc.co.jp/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.fanuc.eu/" target="_blank" rel="noopener noreferrer">https://www.fanuc.eu/</a></div>
+    <div class="d">Европейское представительство FANUC — удобно для запросов по ROBOCUT (WEDM)</div>
+    <div class="r"><span class="st st-chk">требует проверки · 24.11.2026</span><button class="copy" data-copy="https://www.fanuc.eu/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Страница серии ROBOCUT α-CiC</div>
+    <div class="d">Прямой URL на страницу серии не подтверждён; на fanuc.co.jp — раздел продукции ROBOCUT</div>
+    <div class="r"><span class="st st-chk">требует проверки</span></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Русскоязычная страница / представительство в РФ</div>
+    <div class="d">Не найдено: поставки в РФ прекращены</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Затруднён: японские меры METI (с 2022 г.) запрещают экспорт станков и систем ЧПУ в РФ; FANUC прекратила продажи. Канал — только параллельный импорт с высоким риском.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: fanuc.co.jp; meti.go.jp.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Jiangsu Dongqing Machine Tool Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0016 — проволочно-вырезной станок с ЧПУ DK7732.</p>
+<p><b>Применение.</b> Вырезка контуров штампов, матриц, фасонных деталей и электродов; обработка закалённых сталей.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Jiangsu+Dongqing+Machine+Tool+Co+Ltd+DK7732" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Jiangsu+Dongqing+Machine+Tool+Co+Ltd+DK7732</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Jiangsu+Dongqing+Machine+Tool+Co+Ltd+DK7732">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; станки класса DK широко поставляются в РФ и СНГ.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Qianyuanxing CNC Equipment Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0017 — проволочно-вырезной станок DK7735.</p>
+<p><b>Применение.</b> Вырезка деталей штампов и пресс-форм, фасонных отверстий и пазов, обработка после закалки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Qianyuanxing+CNC+Equipment+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Qianyuanxing+CNC+Equipment+Co+Ltd</a></div>
+    <div class="d">Официальный сайт и город регистрации не установлены; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Qianyuanxing+CNC+Equipment+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; перед сделкой — проверка юрлица по государственному реестру предприятий КНР.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="cutting">8. Режущее и металлообрабатывающее оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Hebei Machine Tool Works — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0018 — токарно-винторезный станок C60-01.</p>
+<p><b>Применение.</b> Токарная обработка тел вращения, нарезание резьб, изготовление и ремонт оснастки, валов, втулок.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Hebei+Machine+Tool+Works+lathe+C620" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Hebei+Machine+Tool+Works+lathe+C620</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка (обозначение ближе всего к ряду C620-1)</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Hebei+Machine+Tool+Works+lathe+C620">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; при ввозе б/у — ТР ТС 010/2011 и экспертиза остаточного ресурса.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Mudanjiang Mike Machine Tool Manufacturing Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0019 — токарно-винторезный станок CA6150.</p>
+<p><b>Применение.</b> Универсальная токарная обработка и нарезание резьб, обработка деталей Ø500 мм; инструментальное и ремонтное производство.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Mudanjiang+Mike+Machine+Tool+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Mudanjiang+Mike+Machine+Tool+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не подтверждён; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Mudanjiang+Mike+Machine+Tool+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Zhejiang Jinyun Hongxin Machine Tool Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0020 — ленточнопильный станок GZ4232.</p>
+<p><b>Применение.</b> Резка заготовок из конструкционной и легированной стали (круг до Ø320 мм) под механообработку.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Zhejiang+Jinyun+Hongxin+Machine+Tool+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Zhejiang+Jinyun+Hongxin+Machine+Tool+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Zhejiang+Jinyun+Hongxin+Machine+Tool+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Zibo Jinxin Shear &amp; Bending Machine Works — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0021 — листогибочный пресс WC67Y-35×2000.</p>
+<p><b>Применение.</b> Гибка листа усилием 35 т, длина гиба 2000 мм: корпуса, кожухи, кронштейны, элементы оснастки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Zibo+Jinxin+Shear+Bending+Machine+Works" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Zibo+Jinxin+Shear+Bending+Machine+Works</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Zibo+Jinxin+Shear+Bending+Machine+Works">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; сертификация по ТР ТС 010/2011.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Shanghai Changting Forging Press Machine Works — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0022 — гильотинные ножницы Q11-3×1300.</p>
+<p><b>Применение.</b> Резка листа до 3 мм, шириной до 1300 мм; заготовительный участок под гибку и сварку.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Shanghai+Changting+Forging+Press+Machine+Works" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Shanghai+Changting+Forging+Press+Machine+Works</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Shanghai+Changting+Forging+Press+Machine+Works">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Dongtang Press Equipment Factory — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0023 — кривошипный пресс J23.</p>
+<p><b>Применение.</b> Штамповка, вырубка и гибка мелких и средних деталей из листа.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Dongtang+Press+Equipment+Factory+J23+press" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Dongtang+Press+Equipment+Factory+J23+press</a></div>
+    <div class="d">Официальный сайт не найден (мелкий завод); поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Dongtang+Press+Equipment+Factory+J23+press">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://s.1688.com/" target="_blank" rel="noopener noreferrer">https://s.1688.com/</a></div>
+    <div class="d">1688.com — поиск карточки завода по названию</div>
+    <div class="r"><span class="st st-chk">требует проверки · 24.11.2026</span><button class="copy" data-copy="https://s.1688.com/">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; оборудование повышенной опасности — обязательны сертификация по ТР ТС 010/2011 и обеспечение требований безопасности (ГОСТ 12.2.017).</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Liwei (Dongguan) Precision Machinery Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0024 — универсальный консольно-фрезерный станок 3VA.</p>
+<p><b>Применение.</b> Фрезерование плоскостей, пазов, уступов; ремонтные и инструментальные работы.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Liwei+Dongguan+Precision+Machinery+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Liwei+Dongguan+Precision+Machinery+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Liwei+Dongguan+Precision+Machinery+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Nantong Zhongnan CNC Machine Tool Manufacturing Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0025 — плоскошлифовальный станок M250AH.</p>
+<p><b>Применение.</b> Финишное шлифование плоскостей плит, штампов, направляющих, деталей после термообработки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Nantong+Zhongnan+CNC+Machine+Tool+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Nantong+Zhongnan+CNC+Machine+Tool+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не подтверждён; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Nantong+Zhongnan+CNC+Machine+Tool+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Dongguan Zhengfeng Electrical Complete Equipment Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0026 — плоскошлифовальный станок DF-JJ-15 (код совпадает с дробилкой поз. 00012).</p>
+<p><b>Применение.</b> Шлифование плоских поверхностей деталей пресс-форм и оснастки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Dongguan+Zhengfeng+Electrical+Complete+Equipment+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Dongguan+Zhengfeng+Electrical+Complete+Equipment+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; профиль по названию (комплектное электрооборудование) не соответствует станкостроению — вероятна перепродажа</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Dongguan+Zhengfeng+Electrical+Complete+Equipment+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, но позиция требует уточнения фактического изготовителя.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="welding">9. Сварочное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Suzhou Mingjiang Laser Technology Co., Ltd. — Китай</h3><span class="badge b-lim">ограничен / через посредников</span></div>
+<p class="meta">Позиция каталога: зав. № 0027 — лазерная сварочная установка HJ-400.</p>
+<p><b>Применение.</b> Прецизионная сварка тонкостенных деталей пресс-форм, ремонт формообразующих вставок, сварка герметичных узлов.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Suzhou+Mingjiang+Laser+Technology+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Suzhou+Mingjiang+Laser+Technology+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Suzhou+Mingjiang+Laser+Technology+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Ограничен условно: лазерные источники отдельных параметров могут попадать под 6A005 EAR/Вассенаар; сварочные установки ~400 Вт, как правило, не контролируются. Запросить паспорт с параметрами лазера и класс опасности.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="other">10. Прочее оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Meihua Gongpin (Tianjin) Technology Development Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0028 — термоусадочная машина MW-YH32.</p>
+<p><b>Применение.</b> Упаковка готовых изделий и комплектующих в термоусадочную плёнку.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Meihua+Gongpin+Tianjin+Technology+Development+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Meihua+Gongpin+Tianjin+Technology+Development+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Meihua+Gongpin+Tianjin+Technology+Development+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Beijing Leijieming Laser Technology Co., Ltd. — Китай</h3><span class="badge b-lim">ограничен / через посредников</span></div>
+<p class="meta">Позиция каталога: зав. № 0029 — полупроводниковый лазерный маркер LM-50D-II.</p>
+<p><b>Применение.</b> Маркировка деталей, инструмента и оснастки: логотипы, артикулы, серийные номера, DataMatrix.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Beijing+Leijieming+Laser+Technology+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Beijing+Leijieming+Laser+Technology+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Beijing+Leijieming+Laser+Technology+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Ограничен условно; фактически поставка возможна напрямую (маркировочные лазеры 50 Вт обычно не контролируются).</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Guangdong Zhengli Precision Machinery Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0030 — одношнековый винтовой компрессор OGVFD-314/8.</p>
+<p><b>Применение.</b> Обеспечение сжатым воздухом (~3,14 м³/мин при 0,8 МПа) пневмоинструмента, станков, пескоструйных и окрасочных участков.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Guangdong+Zhengli+Precision+Machinery+Co+Ltd+screw+compressor" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Guangdong+Zhengli+Precision+Machinery+Co+Ltd+screw+compressor</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Guangdong+Zhengli+Precision+Machinery+Co+Ltd+screw+compressor">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; при наличии ресивера под давлением — ТР ТС 032/2013.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="polishing">11. Полировальное, пескоструйное, пылегазоочистное</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Xingtai Hangxing Machinery Manufacturing Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0031 — зеркальный полировальный станок X600.</p>
+<p><b>Применение.</b> Зеркальное полирование формообразующих поверхностей пресс-форм, штампов, оптической и медицинской оснастки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Xingtai+Hangxing+Machinery+Manufacturing+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Xingtai+Hangxing+Machinery+Manufacturing+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Xingtai+Hangxing+Machinery+Manufacturing+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Cangzhou Luzhou Environmental Equipment Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 0032, 0033 (пескоструйные DF-JJ-19 / DF-JJ-20), 00016 (очистка воздуха окраски LZ-LF), 00017 (промышленная пылеочистка 2020830).</p>
+<p><b>Применение.</b> Абразивная очистка поверхностей и подготовка под покрытие; улавливание окрасочного тумана; очистка воздуха рабочих зон при шлифовании, полировании, сварке.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.made-in-china.com/" target="_blank" rel="noopener noreferrer">https://www.made-in-china.com/</a></div>
+    <div class="d">Отраслевой каталог — поиск карточки поставщика оборудования пылеочистки</div>
+    <div class="r"><span class="st st-ok">проверено (домен) · 24.11.2026</span><button class="copy" data-copy="https://www.made-in-china.com/">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; при эксплуатации — требования ФЗ-96 (охрана атмосферного воздуха), ПДВ, вентиляция и СИЗ.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="drying">12. Сушильное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Taizhou Tiantai Electric Heating Instrument Factory — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0034 — электрический термостатный сушильный шкаф с обдувом 101AS-4.</p>
+<p><b>Применение.</b> Сушка и термообработка деталей, сушка после окраски и промывки, испытания материалов при заданной температуре.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Taizhou+Tiantai+Electric+Heating+Instrument+Factory" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Taizhou+Tiantai+Electric+Heating+Instrument+Factory</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Taizhou+Tiantai+Electric+Heating+Instrument+Factory">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Jinan Tufeng Environmental Equipment Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 0035 (сушильный шкаф DF-JJ-17), 00018 (рукавный фильтр DF-JJ-21).</p>
+<p><b>Применение.</b> Сушка окрашенных изделий и форм; сухая очистка отходящих газов от пыли на участках шлифования, пескоструя, пластмассообработки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Fujian Jiuda Machinery Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 0036 — сушилка для полимерного сырья LW-30AC.</p>
+<p><b>Применение.</b> Подсушка гранулята (ABS, PC, PA, PBT) перед литьём для предотвращения гидролиза и дефектов изделий.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Fujian+Jiuda+Machinery+Co+Ltd+hopper+dryer" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Fujian+Jiuda+Machinery+Co+Ltd+hopper+dryer</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Fujian+Jiuda+Machinery+Co+Ltd+hopper+dryer">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="coating">13. Окрасочное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Gema (Wagner Group) / атрибуция каталога «Liebel» — Швейцария / не установлено</h3><span class="badge b-nd">данных нет</span></div>
+<p class="meta">Позиция каталога: зав. № 0037 — установка порошкового напыления OptiStar CG30.</p>
+<p><b>Применение.</b> Порошковое окрашивание металлических деталей и корпусов; ручной электростатический пистолет с блоком управления.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.gema.com/" target="_blank" rel="noopener noreferrer">https://www.gema.com/</a></div>
+    <div class="d">Сайт Gema (Wagner Group) — вероятный изготовитель линейки OptiStar; домен требует подтверждения</div>
+    <div class="r"><span class="st st-chk">требует проверки · 24.11.2026</span><button class="copy" data-copy="https://www.gema.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=OptiStar+CG30+powder+coating+manufacturer" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=OptiStar+CG30+powder+coating+manufacturer</a></div>
+    <div class="d">Поиск подтверждения бренда «Liebel» и принадлежности обозначения OptiStar CG30</div>
+    <div class="r"><span class="st st-chk">требует проверки · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=OptiStar+CG30+powder+coating+manufacturer">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Официальный сайт «Liebel» (США)</div>
+    <div class="d">Не найден: бренд в открытых источниках как производитель окрасочного оборудования не подтверждён</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Данных недостаточно. Если оборудование произведено Gema/Wagner (ЕС/Швейцария) — поставка в РФ ограничена/затруднена (производитель ушёл с рынка). Если это китайский аналог под тем же обозначением — поставка возможна. Требуется шильда, сертификат происхождения и фото заводской таблички.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="molding">14. Литьевое оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Tederic Machinery Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 00001 (450T), 00002 (350T), 00003 (160T), 00004 (100T).</p>
+<p><b>Применение.</b> Литьё под давлением пластиковых изделий (корпуса, кронштейны, технические детали); парк 100–450 тс.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.tedericglobal.com/" target="_blank" rel="noopener noreferrer">https://www.tedericglobal.com/</a></div>
+    <div class="d">Официальный сайт (международная версия)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.tedericglobal.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://cn.tedericglobal.com/" target="_blank" rel="noopener noreferrer">https://cn.tedericglobal.com/</a></div>
+    <div class="d">Китайская версия сайта — ТПА, решения для «умных» производств, контакты завода в Ханчжоу</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://cn.tedericglobal.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Русскоязычная страница</div>
+    <div class="d">Не найдена; переговоры — через международный отдел на tedericglobal.com</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую: ТПА не входят в списки двойного назначения; ограничения — комплаенс банков КНР, логистика, страхование. Публичная компания (Шанхайская биржа, 603289) — удобно для проверки контрагента.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: tedericglobal.com; cn.tedericglobal.com.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Ningbo Enge Precision Machinery — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00005 — ТПА 230T.</p>
+<p><b>Применение.</b> Литьё технических и бытовых пластиковых изделий средней сложности.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Ningbo+Enge+Precision+Machinery+injection+molding" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Ningbo+Enge+Precision+Machinery+injection+molding</a></div>
+    <div class="d">Официальный сайт не подтверждён; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Ningbo+Enge+Precision+Machinery+injection+molding">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; перед сделкой — проверка юрлица по реестру КНР.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Haitian International (Ningbo Haitian Group) — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиции каталога: зав. № 00006 (450T), 00009 (300T), 00011 (380T).</p>
+<p><b>Применение.</b> Крупносерийное литьё пластиковых изделий: корпуса, панели, технические детали, упаковка.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.haitian.com/" target="_blank" rel="noopener noreferrer">https://www.haitian.com/</a></div>
+    <div class="d">Сайт группы Haitian (главная страница)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://www.haitian.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://haitianinter.com/" target="_blank" rel="noopener noreferrer">https://haitianinter.com/</a></div>
+    <div class="d">Haitian International — подразделение ТПА (Mars, Jupiter, Zhafir)</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://haitianinter.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://haitianinter.com/products/" target="_blank" rel="noopener noreferrer">https://haitianinter.com/products/</a></div>
+    <div class="d">Продукция: серии Haitian Mars, Zhafir Venus/Zeres/Jeres</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://haitianinter.com/products/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://haitianinter.com/contact-overview/" target="_blank" rel="noopener noreferrer">https://haitianinter.com/contact-overview/</a></div>
+    <div class="d">Контакты: Haitian Plastics Machinery Group, No. 1688 Haitian Road, Xiaogang, Beilun, Ningbo, 315801</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://haitianinter.com/contact-overview/">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; широкая дилерская сеть, в т.ч. на рынках СНГ. Рекомендация — официальный дистрибьютор либо прямой контракт.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: haitian.com; haitianinter.com.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Chen Hsong Group (завод Zhende, Шуньдэ) — Китай/Гонконг</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00007 — ТПА 150T (Zhende Plastics Machinery Plant).</p>
+<p><b>Применение.</b> Литьё мелких и средних пластиковых изделий, в т.ч. прецизионных деталей.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://chenhsong.com/" target="_blank" rel="noopener noreferrer">https://chenhsong.com/</a></div>
+    <div class="d">Официальный сайт группы Chen Hsong</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://chenhsong.com/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://chenhsong.com/injection-molding-machines/" target="_blank" rel="noopener noreferrer">https://chenhsong.com/injection-molding-machines/</a></div>
+    <div class="d">Линейка ТПА от 20 до 6500 тс</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://chenhsong.com/injection-molding-machines/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://chenhsong.com/about-us/" target="_blank" rel="noopener noreferrer">https://chenhsong.com/about-us/</a></div>
+    <div class="d">О компании: основана в Гонконге в 1958 г., публичная группа</div>
+    <div class="r"><span class="st st-ok">проверено · 24.11.2026</span><button class="copy" data-copy="https://chenhsong.com/about-us/">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u">Страница завода Zhende</div>
+    <div class="d">Отдельная страница предприятия в Шуньдэ не найдена — только в составе группы</div>
+    <div class="r"><span class="st st-no">не найдено · 24.11.2026</span></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; оборудование не входит в контрольные списки.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026. Источники: chenhsong.com.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Ningbo Dongfang Plastic Machinery Manufacturing Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00008 — ТПА 138T.</p>
+<p><b>Применение.</b> Литьё небольших пластиковых изделий, комплектующих и крепежа.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Ningbo+Dongfang+Plastic+Machinery+Manufacturing+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Ningbo+Dongfang+Plastic+Machinery+Manufacturing+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не подтверждён; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Ningbo+Dongfang+Plastic+Machinery+Manufacturing+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Congwei Machinery Co., Ltd. — вероятно Тайвань</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00010 — ТПА 385T.</p>
+<p><b>Применение.</b> Литьё средних и крупных пластиковых изделий, корпусных деталей.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=%22Congwei+Machinery%22+injection+molding+machine" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=%22Congwei+Machinery%22+injection+molding+machine</a></div>
+    <div class="d">Официальный сайт не установлен; поисковая ссылка (уточнить юрисдикцию — Тайвань/КНР)</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=%22Congwei+Machinery%22+injection+molding+machine">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Вероятно возможен; ТПА общего назначения под запрет не подпадают, но требуется уточнение юрисдикции и наличия дилера.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="mixing">15. Смесительное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Junhang Plastic Machinery — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00012 — дробилка (измельчитель) DF-JJ-15.</p>
+<p><b>Применение.</b> Измельчение литников, брака и отходов пластика для повторного использования.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=%22Junhang%22+plastic+machinery+crusher" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=%22Junhang%22+plastic+machinery+crusher</a></div>
+    <div class="d">Официальный сайт не найден (мелкий завод); поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=%22Junhang%22+plastic+machinery+crusher">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://s.1688.com/" target="_blank" rel="noopener noreferrer">https://s.1688.com/</a></div>
+    <div class="d">1688.com — поиск карточки поставщика</div>
+    <div class="r"><span class="st st-chk">требует проверки · 24.11.2026</span><button class="copy" data-copy="https://s.1688.com/">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Ningbo Zhenfei Injection Molding Machine Manufacturing Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00013 — смеситель для пластика VCG-50.</p>
+<p><b>Применение.</b> Смешивание гранулята с красителем и добавками перед литьём (объём 50 л).</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=%22Ningbo+Zhenfei%22+injection+molding+machine" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=%22Ningbo+Zhenfei%22+injection+molding+machine</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка (юрлицо подтверждено каталогом выставки DMP 2024)</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=%22Ningbo+Zhenfei%22+injection+molding+machine">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен, ограничений нет.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="lifting">16. Грузоподъёмное оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Hebei Youqi Machinery Equipment Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00014 — кран (кран-балка) LHN2.8-24.5A3.</p>
+<p><b>Применение.</b> Подъём и перемещение грузов до 2,8 т при пролёте 24,5 м, режимная группа A3; обслуживание цеха механообработки.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Hebei+Youqi+Machinery+Equipment+Co+Ltd+crane" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Hebei+Youqi+Machinery+Equipment+Co+Ltd+crane</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Hebei+Youqi+Machinery+Equipment+Co+Ltd+crane">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; обязательны ТР ТС 010/2011, паспорт и сертификат, при постановке на учёт — Ростехнадзор (ФНП по подъёмным сооружениям).</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Jinan Xiangye Machinery Equipment Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00015 — гидравлический подъёмный стол SJD0.45-5.3.</p>
+<p><b>Применение.</b> Подъём грузов до 0,45 т на высоту до 5,3 м; погрузо-разгрузочные работы, обслуживание оборудования.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Jinan+Xiangye+Machinery+Equipment+Co+Ltd+lift+table" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Jinan+Xiangye+Machinery+Equipment+Co+Ltd+lift+table</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Jinan+Xiangye+Machinery+Equipment+Co+Ltd+lift+table">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; требования ТР ТС 010/2011.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="ecology">17. Экологическое оборудование</h2>
+<div class="cards">
+
+<article class="card">
+<div class="card-head"><h3>Langfang Guangyao Environmental Technology Co., Ltd. — Китай</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Позиция каталога: зав. № 00019 — установка каталитического дожига отходящих газов CYGH-2.</p>
+<p><b>Применение.</b> Термокаталитическая нейтрализация летучих органических соединений от окрасочных и сушильных участков.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Langfang+Guangyao+Environmental+Technology+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Langfang+Guangyao+Environmental+Technology+Co+Ltd</a></div>
+    <div class="d">Официальный сайт не найден; поисковая ссылка</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Langfang+Guangyao+Environmental+Technology+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен; при эксплуатации — соответствие требованиям НДТ и ПДВ.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+<article class="card">
+<div class="card-head"><h3>Позиции экологии, учтённые в других карточках</h3><span class="badge b-ok">экспорт возможен</span></div>
+<p class="meta">Зав. № 00016, 00017 — Cangzhou Luzhou Environmental Equipment Co., Ltd. (см. раздел 11); зав. № 00018 — Jinan Tufeng Environmental Equipment Co., Ltd. (см. раздел 12).</p>
+<p><b>Применение.</b> Очистка воздуха окрасочной камеры, промышленная пылеочистка, рукавная фильтрация отходящих газов.</p>
+<div class="links">
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd</a></div>
+    <div class="d">Производитель поз. 00016, 00017 — официальный сайт не найден</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd">📋 Копировать</button></div>
+  </div>
+  <div class="linkrow">
+    <div class="u"><a href="https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd" target="_blank" rel="noopener noreferrer">https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd</a></div>
+    <div class="d">Производитель поз. 00018 — официальный сайт не найден</div>
+    <div class="r"><span class="st st-no">не найдено / поиск · 24.11.2026</span><button class="copy" data-copy="https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd">📋 Копировать</button></div>
+  </div>
+</div>
+<div class="card-actions"><button class="copy" data-copy-card="1">📋 Копировать все ссылки производителя</button></div>
+<p><b>Вывод по экспорту в РФ.</b> Возможен напрямую; ограничения — только сертификация и экологические требования при эксплуатации.</p>
+<p class="meta">Дата проверки ссылок: 24.11.2026.</p>
+</article>
+
+</div>
+
+<h2 id="table">18. Сводная таблица: оборудование — производитель — страна — сайт — статус экспорта</h2>
+<div class="card">
+<div class="controls">
+  <input type="search" id="fq" placeholder="Поиск по названию, модели, производителю…" style="min-width:270px">
+  <select id="fCat">
+    <option value="">Все категории</option>
+    <option>Обрабатывающие центры</option>
+    <option>КИО</option>
+    <option>Резьбонарезное</option>
+    <option>Электроэрозионное</option>
+    <option>Проволочно-вырезное</option>
+    <option>Режущее</option>
+    <option>Сварочное</option>
+    <option>Прочее</option>
+    <option>Полировальное</option>
+    <option>Сушильное</option>
+    <option>Окрасочное</option>
+    <option>Литьевое</option>
+    <option>Смесительное</option>
+    <option>Грузоподъёмное</option>
+    <option>Экологическое</option>
+  </select>
+  <select id="fCountry">
+    <option value="">Все страны</option>
+    <option>США</option>
+    <option>Германия</option>
+    <option>Япония</option>
+    <option>Китай</option>
+    <option>Тайвань</option>
+    <option>Не установлено</option>
+  </select>
+  <select id="fStatus">
+    <option value="">Любой статус экспорта</option>
+    <option value="ok">Экспорт возможен</option>
+    <option value="lim">Ограничен / через посредников</option>
+    <option value="no">Экспорт затруднён</option>
+    <option value="nd">Данных нет</option>
+  </select>
+  <button id="fReset" type="button">Сбросить</button>
+  <span id="fCount"></span>
+</div>
+<div class="tbl-scroll">
+<table id="eqTable">
+<thead>
+<tr><th>№</th><th>Оборудование / модель</th><th>Кол-во, ед.</th><th>Категория</th><th>Производитель</th><th>Страна</th><th>Официальный сайт</th><th>Экспорт в РФ</th></tr>
+</thead>
+<tbody>
+<tr data-cat="Обрабатывающие центры" data-country="США" data-status="no"><td>1</td><td>Haas UMC-1000SS (5-осевой ОЦ)</td><td>1</td><td>Обрабатывающие центры</td><td>Haas Automation, Inc.</td><td>США</td><td><a href="https://www.haascnc.com/" target="_blank" rel="noopener noreferrer">haascnc.com</a> <button class="copy mini" data-copy="https://www.haascnc.com/">📋</button></td><td><span class="badge b-no">затруднён</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Германия" data-status="no"><td>2</td><td>DMG duoBLOCK «80100» (5-осевой ОЦ)</td><td>1</td><td>Обрабатывающие центры</td><td>DMG MORI (торг. юрлицо в КНР)</td><td>Германия</td><td><a href="https://www.dmgmori.com/" target="_blank" rel="noopener noreferrer">dmgmori.com</a> <button class="copy mini" data-copy="https://www.dmgmori.com/">📋</button></td><td><span class="badge b-no">затруднён</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="lim"><td>3</td><td>Mazak QTE-100MYL (токарно-фрезерный, ось Y)</td><td>1</td><td>Обрабатывающие центры</td><td>Yamazaki Mazak Machine Tool (Liaoning) Co., Ltd.</td><td>Китай</td><td><a href="https://www.mazak.com/" target="_blank" rel="noopener noreferrer">mazak.com</a> <button class="copy mini" data-copy="https://www.mazak.com/">📋</button></td><td><span class="badge b-lim">ограничен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="lim"><td>4</td><td>Mazak QSM200L/500 (токарный с ЧПУ)</td><td>2</td><td>Обрабатывающие центры</td><td>Ningxia Little Giant Machine Tool Co., Ltd.</td><td>Китай</td><td><a href="https://www.mazak.com/" target="_blank" rel="noopener noreferrer">mazak.com</a> <button class="copy mini" data-copy="https://www.mazak.com/">📋</button></td><td><span class="badge b-lim">ограничен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>5</td><td>Вертикальный ОЦ T5</td><td>3</td><td>Обрабатывающие центры</td><td>Taizhou Modern CNC Machine Tool Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>6</td><td>Вертикальный ОЦ T5 (поставщик — Shenzhen Juren)</td><td>1</td><td>Обрабатывающие центры</td><td>Shenzhen Juren CNC Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Shenzhen+Juren+CNC+Equipment+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>7</td><td>Вертикальный ОЦ T6</td><td>1</td><td>Обрабатывающие центры</td><td>Taizhou Modern CNC Machine Tool Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>8</td><td>Сверлильно-резьбонарезной центр T6</td><td>4</td><td>Обрабатывающие центры</td><td>Taizhou Modern CNC Machine Tool Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>9</td><td>ОЦ VML855 (вертикальный / «горизонтальный»)</td><td>2</td><td>Обрабатывающие центры</td><td>Taizhou Modern CNC Machine Tool Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>10</td><td>ОЦ «850»</td><td>1</td><td>Обрабатывающие центры</td><td>Taizhou Modern CNC Machine Tool Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>11</td><td>Гравировально-фрезерный «2812524»</td><td>1</td><td>Обрабатывающие центры</td><td>Ningbo Minsheng Machinery Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Ningbo+Minsheng+Machinery+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Обрабатывающие центры" data-country="Китай" data-status="ok"><td>12</td><td>Гравировально-фрезерный 20150A</td><td>1</td><td>Обрабатывающие центры</td><td>Ningbo Minsheng Machinery Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Ningbo+Minsheng+Machinery+Co+Ltd+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="КИО" data-country="Китай" data-status="lim"><td>13</td><td>КИМ Croma Classic686</td><td>1</td><td>КИО</td><td>Serein Metrology (Shenzhen) Co., Ltd.</td><td>Китай</td><td><a href="https://www.serein.com.cn/en" target="_blank" rel="noopener noreferrer">serein.com.cn/en</a> <button class="copy mini" data-copy="https://www.serein.com.cn/en">📋</button></td><td><span class="badge b-lim">ограничен</span></td></tr>
+<tr data-cat="КИО" data-country="Китай" data-status="ok"><td>14</td><td>Профилометр K01523032802</td><td>1</td><td>КИО</td><td>Qingdao Fengyinhang Trading Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Qingdao+Fengyinhang+Trading+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="КИО" data-country="Китай" data-status="ok"><td>15</td><td>Твердомер Либа YDJ220711016309</td><td>1</td><td>КИО</td><td>Shanghai Kaiyan Testing Instrument Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Shanghai+Kaiyan+Testing+Instrument+Co+Ltd+official">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="КИО" data-country="Китай" data-status="ok"><td>16</td><td>Толщиномер покрытий XCT330S</td><td>1</td><td>КИО</td><td>Beijing Saiboruixin Technology Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Beijing+Saiboruixin+Technology+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="КИО" data-country="Китай" data-status="ok"><td>17</td><td>Колориметр NR60CP</td><td>1</td><td>КИО</td><td>Guangdong 3nh Technology Co., Ltd.</td><td>Китай</td><td><a href="https://www.3nh.com/en/" target="_blank" rel="noopener noreferrer">3nh.com/en</a> <button class="copy mini" data-copy="https://www.3nh.com/en/">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Резьбонарезное" data-country="Китай" data-status="ok"><td>18</td><td>Резьбонарезная машина M6–M30</td><td>1</td><td>Резьбонарезное</td><td>Tianjin Jiaming Electromechanical Technology Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Tianjin+Jiaming+Electromechanical+Technology+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Резьбонарезное" data-country="Китай" data-status="ok"><td>19</td><td>Резьбонарезные SWJ-6B / SWJ-7B</td><td>4</td><td>Резьбонарезное</td><td>Hangzhou Xihu Bench Drill Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Hangzhou+Xihu+Bench+Drill+Co+Ltd+official">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Резьбонарезное" data-country="Китай" data-status="ok"><td>20</td><td>Настольные сверлильные 2512B</td><td>6</td><td>Резьбонарезное</td><td>Hangzhou Xihu Bench Drill Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Hangzhou+Xihu+Bench+Drill+Co+Ltd+official">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Резьбонарезное" data-country="Китай" data-status="ok"><td>21</td><td>Радиально-сверлильный Z3050×16/1</td><td>1</td><td>Резьбонарезное</td><td>Shenyang Zhongjie Machine Tool Works</td><td>Китай</td><td>группа: поиск <button class="copy mini" data-copy="https://www.google.com/search?q=Shenyang+Machine+Tool+Group+official+website">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Электроэрозионное" data-country="Китай" data-status="ok"><td>22</td><td>Прошивочный ЭЭ Dm7132</td><td>1</td><td>Электроэрозионное</td><td>Taizhou Jiangzhou Machine Tool Works</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Taizhou+Jiangzhou+Machine+Tool+Works+EDM">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Электроэрозионное" data-country="Китай" data-status="ok"><td>23</td><td>Прошивочные ЭЭ ZNC-450</td><td>2</td><td>Электроэрозионное</td><td>Suzhou Xinhua Machine Tool Works</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Suzhou+Xinhua+Machine+Tool+Works+EDM+ZNC">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Проволочно-вырезное" data-country="Япония" data-status="no"><td>24</td><td>FANUC ROBOCUT α-C00iC (вероятно α-C600iC)</td><td>1</td><td>Проволочно-вырезное</td><td>FANUC Corporation</td><td>Япония</td><td><a href="https://www.fanuc.co.jp/" target="_blank" rel="noopener noreferrer">fanuc.co.jp</a> <button class="copy mini" data-copy="https://www.fanuc.co.jp/">📋</button></td><td><span class="badge b-no">затруднён</span></td></tr>
+<tr data-cat="Проволочно-вырезное" data-country="Китай" data-status="ok"><td>25</td><td>Проволочно-вырезной DK7732</td><td>1</td><td>Проволочно-вырезное</td><td>Jiangsu Dongqing Machine Tool Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Jiangsu+Dongqing+Machine+Tool+Co+Ltd+DK7732">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Проволочно-вырезное" data-country="Китай" data-status="ok"><td>26</td><td>Проволочно-вырезной DK7735</td><td>1</td><td>Проволочно-вырезное</td><td>Qianyuanxing CNC Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Qianyuanxing+CNC+Equipment+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>27</td><td>Токарно-винторезный C60-01</td><td>1</td><td>Режущее</td><td>Hebei Machine Tool Works</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Hebei+Machine+Tool+Works+lathe+C620">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>28</td><td>Токарно-винторезный CA6150</td><td>1</td><td>Режущее</td><td>Mudanjiang Mike Machine Tool Manufacturing Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Mudanjiang+Mike+Machine+Tool+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>29</td><td>Ленточнопильный GZ4232</td><td>1</td><td>Режущее</td><td>Zhejiang Jinyun Hongxin Machine Tool Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Zhejiang+Jinyun+Hongxin+Machine+Tool+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>30</td><td>Листогибочный пресс WC67Y-35×2000</td><td>1</td><td>Режущее</td><td>Zibo Jinxin Shear &amp; Bending Machine Works</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Zibo+Jinxin+Shear+Bending+Machine+Works">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>31</td><td>Гильотинные ножницы Q11-3×1300</td><td>1</td><td>Режущее</td><td>Shanghai Changting Forging Press Machine Works</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Shanghai+Changting+Forging+Press+Machine+Works">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>32</td><td>Кривошипный пресс J23</td><td>1</td><td>Режущее</td><td>Dongtang Press Equipment Factory</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Dongtang+Press+Equipment+Factory+J23+press">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>33</td><td>Консольно-фрезерный 3VA</td><td>1</td><td>Режущее</td><td>Liwei (Dongguan) Precision Machinery Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Liwei+Dongguan+Precision+Machinery+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>34</td><td>Плоскошлифовальный M250AH</td><td>1</td><td>Режущее</td><td>Nantong Zhongnan CNC Machine Tool Manufacturing Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Nantong+Zhongnan+CNC+Machine+Tool+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Режущее" data-country="Китай" data-status="ok"><td>35</td><td>Плоскошлифовальный DF-JJ-15</td><td>1</td><td>Режущее</td><td>Dongguan Zhengfeng Electrical Complete Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Dongguan+Zhengfeng+Electrical+Complete+Equipment+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Сварочное" data-country="Китай" data-status="lim"><td>36</td><td>Лазерная сварочная установка HJ-400</td><td>1</td><td>Сварочное</td><td>Suzhou Mingjiang Laser Technology Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Suzhou+Mingjiang+Laser+Technology+Co+Ltd">📋</button></td><td><span class="badge b-lim">ограничен условно</span></td></tr>
+<tr data-cat="Прочее" data-country="Китай" data-status="ok"><td>37</td><td>Термоусадочная машина MW-YH32</td><td>1</td><td>Прочее</td><td>Meihua Gongpin (Tianjin) Technology Development Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Meihua+Gongpin+Tianjin+Technology+Development+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Прочее" data-country="Китай" data-status="lim"><td>38</td><td>Лазерный маркер LM-50D-II</td><td>1</td><td>Прочее</td><td>Beijing Leijieming Laser Technology Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Beijing+Leijieming+Laser+Technology+Co+Ltd">📋</button></td><td><span class="badge b-lim">ограничен условно</span></td></tr>
+<tr data-cat="Прочее" data-country="Китай" data-status="ok"><td>39</td><td>Винтовой компрессор OGVFD-314/8</td><td>1</td><td>Прочее</td><td>Guangdong Zhengli Precision Machinery Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Guangdong+Zhengli+Precision+Machinery+Co+Ltd+screw+compressor">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Полировальное" data-country="Китай" data-status="ok"><td>40</td><td>Полировальный X600</td><td>1</td><td>Полировальное</td><td>Xingtai Hangxing Machinery Manufacturing Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Xingtai+Hangxing+Machinery+Manufacturing+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Полировальное" data-country="Китай" data-status="ok"><td>41</td><td>Пескоструйные DF-JJ-19 / DF-JJ-20</td><td>2</td><td>Полировальное</td><td>Cangzhou Luzhou Environmental Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Сушильное" data-country="Китай" data-status="ok"><td>42</td><td>Сушильный шкаф 101AS-4</td><td>1</td><td>Сушильное</td><td>Taizhou Tiantai Electric Heating Instrument Factory</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Taizhou+Tiantai+Electric+Heating+Instrument+Factory">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Сушильное" data-country="Китай" data-status="ok"><td>43</td><td>Сушильный шкаф DF-JJ-17</td><td>1</td><td>Сушильное</td><td>Jinan Tufeng Environmental Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Сушильное" data-country="Китай" data-status="ok"><td>44</td><td>Сушилка сырья LW-30AC</td><td>1</td><td>Сушильное</td><td>Fujian Jiuda Machinery Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Fujian+Jiuda+Machinery+Co+Ltd+hopper+dryer">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Окрасочное" data-country="Не установлено" data-status="nd"><td>45</td><td>Порошковая установка OptiStar CG30</td><td>1</td><td>Окрасочное</td><td>«Liebel» (атрибуция каталога) / вероятно Gema</td><td>Не установлено</td><td><a href="https://www.gema.com/" target="_blank" rel="noopener noreferrer">gema.com (требует проверки)</a> <button class="copy mini" data-copy="https://www.gema.com/">📋</button></td><td><span class="badge b-nd">данных нет</span></td></tr>
+<tr data-cat="Литьевое" data-country="Китай" data-status="ok"><td>46</td><td>ТПА 450T / 350T / 160T / 100T</td><td>4</td><td>Литьевое</td><td>Tederic Machinery Co., Ltd.</td><td>Китай</td><td><a href="https://www.tedericglobal.com/" target="_blank" rel="noopener noreferrer">tedericglobal.com</a> <button class="copy mini" data-copy="https://www.tedericglobal.com/">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Литьевое" data-country="Китай" data-status="ok"><td>47</td><td>ТПА 230T</td><td>1</td><td>Литьевое</td><td>Ningbo Enge Precision Machinery</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Ningbo+Enge+Precision+Machinery+injection+molding">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Литьевое" data-country="Китай" data-status="ok"><td>48</td><td>ТПА 450T / 300T / 380T</td><td>3</td><td>Литьевое</td><td>Haitian International (Ningbo Haitian Group)</td><td>Китай</td><td><a href="https://haitianinter.com/" target="_blank" rel="noopener noreferrer">haitianinter.com</a> <button class="copy mini" data-copy="https://haitianinter.com/">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Литьевое" data-country="Китай" data-status="ok"><td>49</td><td>ТПА 150T (Zhende)</td><td>1</td><td>Литьевое</td><td>Chen Hsong Group (Zhende Plastics Machinery Plant)</td><td>Китай</td><td><a href="https://chenhsong.com/" target="_blank" rel="noopener noreferrer">chenhsong.com</a> <button class="copy mini" data-copy="https://chenhsong.com/">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Литьевое" data-country="Китай" data-status="ok"><td>50</td><td>ТПА 138T</td><td>1</td><td>Литьевое</td><td>Ningbo Dongfang Plastic Machinery Manufacturing Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Ningbo+Dongfang+Plastic+Machinery+Manufacturing+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Литьевое" data-country="Тайвань" data-status="ok"><td>51</td><td>ТПА 385T</td><td>1</td><td>Литьевое</td><td>Congwei Machinery Co., Ltd.</td><td>Тайвань</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=%22Congwei+Machinery%22+injection+molding+machine">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Смесительное" data-country="Китай" data-status="ok"><td>52</td><td>Дробилка DF-JJ-15</td><td>1</td><td>Смесительное</td><td>Junhang Plastic Machinery</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=%22Junhang%22+plastic+machinery+crusher">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Смесительное" data-country="Китай" data-status="ok"><td>53</td><td>Смеситель VCG-50</td><td>1</td><td>Смесительное</td><td>Ningbo Zhenfei Injection Molding Machine Manufacturing Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=%22Ningbo+Zhenfei%22+injection+molding+machine">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Грузоподъёмное" data-country="Китай" data-status="ok"><td>54</td><td>Кран (кран-балка) LHN2.8-24.5A3</td><td>1</td><td>Грузоподъёмное</td><td>Hebei Youqi Machinery Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Hebei+Youqi+Machinery+Equipment+Co+Ltd+crane">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Грузоподъёмное" data-country="Китай" data-status="ok"><td>55</td><td>Подъёмный стол SJD0.45-5.3</td><td>1</td><td>Грузоподъёмное</td><td>Jinan Xiangye Machinery Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Jinan+Xiangye+Machinery+Equipment+Co+Ltd+lift+table">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Экологическое" data-country="Китай" data-status="ok"><td>56</td><td>Очистка воздуха окраски LZ-LF + пылеочистка 2020830</td><td>2</td><td>Экологическое</td><td>Cangzhou Luzhou Environmental Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Экологическое" data-country="Китай" data-status="ok"><td>57</td><td>Рукавный фильтр DF-JJ-21</td><td>1</td><td>Экологическое</td><td>Jinan Tufeng Environmental Equipment Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+<tr data-cat="Экологическое" data-country="Китай" data-status="ok"><td>58</td><td>Каталитический дожиг CYGH-2</td><td>1</td><td>Экологическое</td><td>Langfang Guangyao Environmental Technology Co., Ltd.</td><td>Китай</td><td>сайт не найден <button class="copy mini" data-copy="https://www.google.com/search?q=Langfang+Guangyao+Environmental+Technology+Co+Ltd">📋</button></td><td><span class="badge b-ok">возможен</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:13px;color:#5b6472">Всего в таблице — <b>81 единица</b> оборудования (строка соответствует модели/группе, количество указано отдельно). Сортировка — клик по заголовку; фильтры работают совместно с поиском.</p>
+</div>
+
+<h2 id="method">19. Методология и источники</h2>
+<div class="card">
+<h4>19.1. Принципы работы со ссылками</h4>
+<ul class="tight">
+<li><b>Проверено</b> — домен или конкретная страница получены из открытых источников в ходе проверки 24.11.2026 (поиск, выдача, страницы производителей). Для крупных групп (Haas, Mazak, FANUC, DMG MORI, Haitian, Chen Hsong, Tederic, 3nh, Serein) подтверждены главные домены и — где удалось — прямые страницы моделей/серий.</li>
+<li><b>Требует проверки</b> — домен общеизвестен для этого изготовителя, но конкретный путь или региональная версия не подтверждены; такие адреса не выдаются за официальные без оговорки.</li>
+<li><b>Не найдено</b> — официальный сайт отсутствует или не обнаружен; вместо домысла приведена поисковая ссылка (Google, 1688, Made-in-China). Это относится к большинству мелких заводов: Taizhou Modern, Ningbo Minsheng, Hangzhou Xihu Bench Drill, Cangzhou Luzhou, Jinan Tufeng, Dongtang Press Equipment Factory, Junhang Plastic Machinery, Ningbo Zhenfei, Qianyuanxing и др.</li>
+</ul>
+
+<h4>19.2. Подтверждённые домены (использованы в документе)</h4>
+<ul class="tight">
+<li>haascnc.com — Haas Automation (США), страницы UMC-1000SS и pre-install guide.</li>
+<li>mazak.com — Yamazaki Mazak, страница серии QTE (модели с осью Y).</li>
+<li>fanuc.co.jp — FANUC Corporation (Япония); европейский домен fanuc.eu помечен как требующий проверки.</li>
+<li>dmgmori.com — DMG MORI (Германия/Япония).</li>
+<li>serein.com.cn — Serein Metrology (Shenzhen); hexagon.com — подтверждение площадки China – Shenzhen (Serein).</li>
+<li>3nh.com — Guangdong 3nh Technology (колориметры/спектрофотометры).</li>
+<li>tedericglobal.com, cn.tedericglobal.com — Tederic Machinery.</li>
+<li>haitian.com, haitianinter.com (+ /products/, /contact-overview/) — Haitian Group / Haitian International.</li>
+<li>chenhsong.com (+ /injection-molding-machines/, /about-us/) — Chen Hsong Group.</li>
+<li>made-in-china.com, s.1688.com — отраслевые каталоги (поиск карточек мелких поставщиков).</li>
+</ul>
+
+<h4>19.3. Выявленные несоответствия каталога</h4>
+<ul class="tight">
+<li>Поз. 04 — «α-C00iC»: в номенклатуре FANUC ROBOCUT серии α-CiC присутствуют α-C400iC и α-C600iC; вероятно искажение записи.</li>
+<li>Поз. 02 — «DMG 80100»: обозначение не соответствует публичной номенклатуре DMG MORI (ближайшие аналоги — DMU 80 P / DMU 100 P duoBLOCK).</li>
+<li>Поз. 17 — VML855 отнесён к горизонтальным центрам, хотя это обозначение вертикального станка.</li>
+<li>Код «DF-JJ-15» присвоен и плоскошлифовальному станку (0026), и дробилке (00012).</li>
+<li>Поз. 0037 — бренд «Liebel» не подтверждён; OptiStar CG30 соответствует линейке Gema (Wagner Group).</li>
+<li>Поз. 10 — станок T5 поставлен шэньчжэньским юрлицом, а не заявленным изготовителем.</li>
+</ul>
+
+<h4>19.4. Нормативная база оценки экспорта</h4>
+<ul class="tight">
+<li>США: EAR (15 CFR), §746.8, Supp. No. 4 to Part 746, ECCN 2B001 / 2B006, Common High Priority List (8456–8466).</li>
+<li>ЕС: Регламент (ЕС) 833/2014, Приложение XXIII; Регламент (ЕС) 2024/1745.</li>
+<li>Япония: ограничения METI на вывоз станков и систем ЧПУ в РФ (с 2022 г.).</li>
+<li>КНР: закон об экспортном контроле (2020) и двухцелевые списки (ужесточены с 01.12.2024).</li>
+<li>РФ: ТР ТС 010/2011, 004/2011, 020/2011, 032/2013; ФНП по подъёмным сооружениям; ФЗ-96 (охрана атмосферного воздуха).</li>
+</ul>
+</div>
+
+<h2 id="disclaimer">20. Ограничение ответственности</h2>
+<div class="card">
+<p><b>Ссылки.</b> Все URL проверены на дату <b>24.11.2026</b>. Домены, структура сайтов, языковые версии и страницы продукции могут изменяться без уведомления; часть страниц доступна только из отдельных стран. Если ссылка не открывается — используйте главную страницу производителя и поиск по названию модели.</p>
+<p><b>Достоверность.</b> Адреса, помеченные «требует проверки», не являются официально подтверждёнными; адреса, помеченные «не найдено», означают отсутствие данных, а не отсутствие предприятия. Транслитерация китайских наименований не заменяет проверку по государственному реестру предприятий КНР и по документам сделки.</p>
+<p><b>Экспортный контроль.</b> Сведения о санкциях, лицензировании и ограничениях носят справочный характер, отражают состояние источников на дату проверки и <b>не являются юридической консультацией</b>. Перед платежом и отгрузкой необходима проверка актуальных редакций Регламента (ЕС) 833/2014 и приложений к нему, EAR/ECCN, перечней METI и китайских мер экспортного контроля, а также согласование платёжного канала с банком.</p>
+<p><b>Ответственность.</b> Автор не несёт ответственности за решения, принятые на основе документа, и за убытки вследствие изменения регулирования, отказа банка, перевозчика или страховщика, а также введения вторичных санкций.</p>
+</div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Справочник официальных сайтов производителей оборудования ООО «Ланфан Дафа Моулд» · 81 ед. · 15 категорий · ссылки проверены 24.11.2026 · документ носит справочный характер и не является юридической консультацией.
+  </div>
+</footer>
+
+<div id="toast">Ссылка скопирована</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Копирование ---------- */
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+
+  function showToast(msg){
+    toast.textContent = msg || 'Ссылка скопирована';
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1600);
+  }
+
+  function fallbackCopy(text, done){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    ta.style.left = '-1000px';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { ta.setSelectionRange(0, ta.value.length); } catch(e){}
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch(e){ ok = false; }
+    document.body.removeChild(ta);
+    done(ok);
+  }
+
+  function copyText(text, btn, msg){
+    text = String(text || '').trim();
+    if(!text){ showToast('Нечего копировать'); return; }
+    function done(ok){
+      if(btn){
+        var original = btn.getAttribute('data-label') || btn.textContent;
+        btn.setAttribute('data-label', original);
+        btn.textContent = ok ? '✅ Скопировано' : '⚠ Не удалось';
+        btn.classList.add('ok');
+        setTimeout(function(){
+          btn.textContent = btn.getAttribute('data-label') || original;
+          btn.classList.remove('ok');
+        }, 1500);
+      }
+      showToast(ok ? (msg || 'Ссылка скопирована') : 'Копирование не удалось — выделите ссылку вручную');
+    }
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ fallbackCopy(text, done); });
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+
+  function collectFrom(root){
+    var out = [], seen = {};
+    root.querySelectorAll('a[href^="http"]').forEach(function(a){
+      var u = a.getAttribute('href');
+      if(u && !seen[u]){ seen[u] = 1; out.push(u); }
+    });
+    root.querySelectorAll('button[data-copy]').forEach(function(b){
+      var u = b.getAttribute('data-copy');
+      if(u && u.indexOf('http') === 0 && !seen[u]){ seen[u] = 1; out.push(u); }
+    });
+    return out;
+  }
+
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-copy], button[data-copy-card], button[data-copy-all]');
+    if(!btn) return;
+    e.preventDefault();
+    if(btn.hasAttribute('data-copy')){
+      copyText(btn.getAttribute('data-copy'), btn);
+    } else if(btn.hasAttribute('data-copy-card')){
+      var card = btn.closest('.card');
+      var list = card ? collectFrom(card) : [];
+      copyText(list.join('\n'), btn, 'Скопировано ссылок: ' + list.length);
+    } else {
+      var all = collectFrom(document);
+      copyText(all.join('\n'), btn, 'Скопировано ссылок: ' + all.length);
+    }
+  });
+
+  /* ---------- Таблица: фильтры и сортировка ---------- */
+  var tb = document.querySelector('#eqTable tbody');
+  if(tb){
+    var rows = Array.prototype.slice.call(tb.rows);
+    var cat = document.getElementById('fCat'),
+        ctry = document.getElementById('fCountry'),
+        st = document.getElementById('fStatus'),
+        q = document.getElementById('fq'),
+        cnt = document.getElementById('fCount');
+
+    function applyFilters(){
+      var c = cat.value, u = ctry.value, s = st.value, t = q.value.trim().toLowerCase(), n = 0;
+      rows.forEach(function(r){
+        var ok = (!c || r.getAttribute('data-cat') === c) &&
+                 (!u || r.getAttribute('data-country') === u) &&
+                 (!s || r.getAttribute('data-status') === s) &&
+                 (!t || r.textContent.toLowerCase().indexOf(t) !== -1);
+        r.style.display = ok ? '' : 'none';
+        if(ok) n++;
+      });
+      cnt.textContent = 'Показано: ' + n + ' из ' + rows.length;
+    }
+
+    [cat, ctry, st].forEach(function(el){ el.addEventListener('change', applyFilters); });
+    q.addEventListener('input', applyFilters);
+    document.getElementById('fReset').addEventListener('click', function(){
+      cat.value = ''; ctry.value = ''; st.value = ''; q.value = ''; applyFilters();
+    });
+
+    document.querySelectorAll('#eqTable thead th').forEach(function(th, i){
+      th.addEventListener('click', function(){
+        var asc = th.getAttribute('data-dir') !== 'asc';
+        document.querySelectorAll('#eqTable thead th').forEach(function(o){ if(o !== th) o.removeAttribute('data-dir'); });
+        th.setAttribute('data-dir', asc ? 'asc' : 'desc');
+        rows.sort(function(a, b){
+          var A = a.cells[i].textContent.trim(), B = b.cells[i].textContent.trim();
+          var na = parseFloat(A.replace(',', '.')), nb = parseFloat(B.replace(',', '.'));
+          var r = (!isNaN(na) && !isNaN(nb)) ? na - nb : A.localeCompare(B, 'ru');
+          return asc ? r : -r;
+        });
+        rows.forEach(function(r){ tb.appendChild(r); });
+      });
+    });
+
+    applyFilters();
+  }
+})();
+</script>
+</body>
+</html>

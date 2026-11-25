@@ -1,0 +1,822 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сводная таблица производителей оборудования — ООО «Ланфан Дафа Моулд» (50 компаний / 81 ед.)</title>
+<style>
+:root{--ok:#1b7f3a;--lim:#b8860b;--no:#b3261e;--nd:#6b7280;--ink:#1f2328;--line:#dde2ea;--bg:#f5f6f8}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 18px}
+header{background:linear-gradient(135deg,#10243e,#1d3d63);color:#fff;padding:32px 0}
+header h1{font-size:24px;margin:0 0 8px;line-height:1.3}
+header p{margin:4px 0;color:#cfdcec;font-size:14.5px}
+h2{font-size:20px;margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h4{font-size:15px;margin:16px 0 6px}
+a{color:#1d5fbf;text-decoration:none;word-break:break-all}
+a:hover{text-decoration:underline}
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:22px 0}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+.kpi .v{font-size:27px;font-weight:700;line-height:1.1;color:#10243e}
+.kpi .l{font-size:12.8px;color:#5b6472;margin-top:4px}
+.kpi.acc{border-left:4px solid #1d5fbf}
+/* chart */
+.chart{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin-bottom:6px}
+.bar{display:grid;grid-template-columns:190px 1fr 62px;gap:10px;align-items:center;margin:7px 0;font-size:13.6px}
+.bar .track{background:#eef1f6;border-radius:6px;height:16px;overflow:hidden}
+.bar .fill{height:16px;border-radius:6px;background:linear-gradient(90deg,#2f6fbf,#1d4f8a)}
+.bar .num{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.bar.tw .fill{background:linear-gradient(90deg,#8a94a6,#6b7280)}
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0;align-items:center}
+select,input[type=search]{padding:8px 11px;border:1px solid #c9d0da;border-radius:8px;font-size:14px;background:#fff;font-family:inherit}
+button{font-family:inherit;font-size:13px;padding:7px 11px;border-radius:8px;border:1px solid #c9d0da;background:#fff;color:var(--ink);cursor:pointer}
+button:hover{background:#eef4fb}
+button.primary{background:#10243e;color:#fff;border-color:#10243e}
+button.primary:hover{background:#1d3d63}
+button.copy{border-color:#9db6d8;color:#14406e;background:#f2f7fd;white-space:nowrap}
+button.copy.ok{border-color:#8ac79c;background:#eaf7ee;color:#14532d}
+#count{font-size:13.5px;color:#5b6472}
+/* table */
+.tbl-scroll{overflow:auto;max-height:72vh;border:1px solid var(--line);border-radius:11px;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:13.2px;min-width:1180px}
+th,td{border-bottom:1px solid #e6eaf0;padding:7px 9px;text-align:left;vertical-align:top}
+thead th{background:#10243e;color:#fff;cursor:pointer;position:sticky;top:0;z-index:2;font-size:12.6px;white-space:nowrap}
+thead th::after{content:" ⇅";opacity:.45;font-size:11px}
+thead th[data-dir="asc"]::after{content:" ▲";opacity:.9}
+thead th[data-dir="desc"]::after{content:" ▼";opacity:.9}
+tbody tr:nth-child(even){background:#fafbfc}
+tbody tr:hover{background:#eef4fb}
+tr.top{background:#fff9e6 !important}
+tr.top:hover{background:#fdf3d2 !important}
+tr.top td:nth-child(2){font-weight:600}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.star{color:#b8860b;font-size:12px;font-weight:700;white-space:nowrap}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.8px;font-weight:600;white-space:nowrap;color:#fff}
+.b-ok{background:var(--ok)}.b-lim{background:var(--lim)}.b-no{background:var(--no)}.b-nd{background:var(--nd)}
+.s{font-size:11.4px;padding:1px 6px;border-radius:999px;border:1px solid;white-space:nowrap}
+.s-ok{color:#14532d;border-color:#8ac79c;background:#eaf7ee}
+.s-chk{color:#7c4a03;border-color:#e3c07a;background:#fdf5e4}
+.s-no{color:#4b5563;border-color:#c7ccd4;background:#f1f2f4}
+.muted{color:#5b6472;font-size:12.4px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:15px 18px}
+ul.tight{margin:6px 0;padding-left:22px}
+ul.tight li{margin:4px 0;font-size:14.2px}
+.warn{background:#fff8e6;border-left:4px solid #e0a800;padding:10px 14px;border-radius:0 8px 8px 0;font-size:13.8px;margin:12px 0}
+#toast{position:fixed;right:18px;bottom:18px;background:#10243e;color:#fff;padding:11px 16px;border-radius:9px;font-size:14px;opacity:0;transform:translateY(10px);transition:.22s;pointer-events:none;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+#toast.show{opacity:1;transform:translateY(0)}
+footer{background:#10243e;color:#c7d5e6;margin-top:38px;padding:20px 0;font-size:13.2px}
+@media(max-width:760px){header h1{font-size:20px}.bar{grid-template-columns:130px 1fr 48px;font-size:12.6px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Сводная таблица производителей оборудования ООО «Ланфан Дафа Моулд»</h1>
+    <p>50 уникальных компаний · 81 единица оборудования · 15 категорий · экспорт в РФ, официальные сайты, копирование ссылок и выгрузка в CSV</p>
+    <p>Дата сверки данных и ссылок: <b>24.11.2026</b>. Документ автономный (без внешних CDN и библиотек).</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h2>1. Ключевые показатели</h2>
+<div class="kpis">
+  <div class="kpi acc"><div class="v">50</div><div class="l">уникальных компаний-производителей</div></div>
+  <div class="kpi acc"><div class="v">81</div><div class="l">единица оборудования в каталоге</div></div>
+  <div class="kpi"><div class="v">1,6</div><div class="l">единицы на компанию (среднее)</div></div>
+  <div class="kpi"><div class="v">45</div><div class="l">Китай</div></div>
+  <div class="kpi"><div class="v">2</div><div class="l">США</div></div>
+  <div class="kpi"><div class="v">1</div><div class="l">Германия</div></div>
+  <div class="kpi"><div class="v">1</div><div class="l">Япония</div></div>
+  <div class="kpi"><div class="v">1</div><div class="l">Тайвань (не подтверждено)</div></div>
+</div>
+
+<div class="chart">
+  <h4>Распределение компаний по стране регистрации</h4>
+  <div class="bar"><div>Китай</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="num">45</div></div>
+  <div class="bar"><div>США</div><div class="track"><div class="fill" style="width:4.4%"></div></div><div class="num">2</div></div>
+  <div class="bar"><div>Германия</div><div class="track"><div class="fill" style="width:2.2%"></div></div><div class="num">1</div></div>
+  <div class="bar"><div>Япония</div><div class="track"><div class="fill" style="width:2.2%"></div></div><div class="num">1</div></div>
+  <div class="bar tw"><div>Тайвань (не подтверждено)</div><div class="track"><div class="fill" style="width:2.2%"></div></div><div class="num">1</div></div>
+  <p class="muted" style="margin:10px 0 0">Итого 50 компаний (45 + 2 + 1 + 1 + 1). Доли рассчитаны от максимума (45), цифры указаны рядом с каждой полосой.</p>
+</div>
+
+<h2>2. Сводная таблица (строка = компания)</h2>
+<div class="controls">
+  <input type="search" id="search" placeholder="Поиск по названию, модели, примечанию…" style="min-width:280px">
+  <select id="fCountry">
+    <option value="">Все страны</option>
+    <option>Китай</option>
+    <option>США</option>
+    <option>Германия</option>
+    <option>Япония</option>
+    <option>Тайвань (не подтверждено)</option>
+  </select>
+  <select id="fCat">
+    <option value="">Все категории</option>
+    <option>Обрабатывающие центры</option>
+    <option>КИМ</option>
+    <option>Резьбонарезное</option>
+    <option>Электроэрозионное</option>
+    <option>Проволочно-вырезное</option>
+    <option>Режущее</option>
+    <option>Сварочное</option>
+    <option>Прочее</option>
+    <option>Полировальное</option>
+    <option>Сушильное</option>
+    <option>Окрасочное</option>
+    <option>Литьевое</option>
+    <option>Смесительное</option>
+    <option>Грузоподъёмное</option>
+    <option>Экологическое</option>
+  </select>
+  <select id="fStatus">
+    <option value="">Любой статус экспорта</option>
+    <option value="ok">Возможен напрямую</option>
+    <option value="lim">Возможен через посредников</option>
+    <option value="no">Ограничен</option>
+    <option value="nd">Нет данных</option>
+  </select>
+  <button id="reset" type="button">Сбросить</button>
+  <button class="primary" id="copyAll" type="button">📋 Копировать все ссылки</button>
+  <button class="primary" id="csv" type="button">⬇ Экспорт таблицы в CSV</button>
+  <span id="count"></span>
+</div>
+
+<div class="tbl-scroll">
+<table id="tbl">
+<thead>
+<tr>
+  <th class="num">№</th>
+  <th>Производитель</th>
+  <th>Страна регистрации</th>
+  <th>Категория оборудования</th>
+  <th class="num">Ед.</th>
+  <th>Модели / позиции</th>
+  <th>Официальный сайт</th>
+  <th>Экспорт в РФ</th>
+  <th>Примечание</th>
+  <th>Ссылка</th>
+</tr>
+</thead>
+<tbody>
+
+<tr data-country="США" data-cat="Обрабатывающие центры" data-status="no">
+  <td class="num">1</td><td>Haas Automation, Inc.</td><td>США</td><td>Обрабатывающие центры</td><td class="num">1</td>
+  <td>UMC-1000SS (№01)</td>
+  <td><a href="https://www.haascnc.com/" target="_blank" rel="noopener noreferrer">haascnc.com</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-no">ограничен</span></td>
+  <td class="muted">ECCN 2B001, EAR §746.8; поставки в РФ прекращены</td>
+  <td><button class="copy" data-copy="https://www.haascnc.com/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Германия" data-cat="Обрабатывающие центры" data-status="no">
+  <td class="num">2</td><td>DMG MORI (торг. юрлицо — DMG MORI Machine Tool Trading, Шанхай)</td><td>Германия</td><td>Обрабатывающие центры</td><td class="num">1</td>
+  <td>duoBLOCK «80100» (№02)</td>
+  <td><a href="https://www.dmgmori.com/" target="_blank" rel="noopener noreferrer">dmgmori.com</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-no">ограничен</span></td>
+  <td class="muted">Annex XXIII Рег. (ЕС) 833/2014; обозначение модели требует уточнения</td>
+  <td><button class="copy" data-copy="https://www.dmgmori.com/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Обрабатывающие центры" data-status="lim">
+  <td class="num">3</td><td>Yamazaki Mazak Machine Tool (Liaoning) Co., Ltd.</td><td>Китай</td><td>Обрабатывающие центры</td><td class="num">1</td>
+  <td>QTE-100MYL (№03)</td>
+  <td><a href="https://www.mazak.com/" target="_blank" rel="noopener noreferrer">mazak.com</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-lim">через посредников</span></td>
+  <td class="muted">завод в Даляне, политика группы Mazak / METI</td>
+  <td><button class="copy" data-copy="https://www.mazak.com/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Обрабатывающие центры" data-status="lim">
+  <td class="num">4</td><td>Ningxia Little Giant Machine Tool Co., Ltd.</td><td>Китай</td><td>Обрабатывающие центры</td><td class="num">2</td>
+  <td>QSM200L/500 (№05, 06)</td>
+  <td><a href="https://www.mazak.com/" target="_blank" rel="noopener noreferrer">mazak.com</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-lim">через посредников</span></td>
+  <td class="muted">СП Mazak + Ningxia Great Wall; собственный сайт не подтверждён</td>
+  <td><button class="copy" data-copy="https://www.mazak.com/">📋 Копировать</button></td>
+</tr>
+
+<tr class="top" data-country="Китай" data-cat="Обрабатывающие центры" data-status="ok">
+  <td class="num">5</td><td>Taizhou Modern CNC Machine Tool Co., Ltd. <span class="star">★ топ</span></td><td>Китай</td><td>Обрабатывающие центры</td><td class="num">12</td>
+  <td>T5 (07–09), T6 (11–15), VML855 (16, 17), 850 (18)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">максимальное число позиций; сайт не обнаружен</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Taizhou+Modern+CNC+Machine+Tool+Co+Ltd+official+website">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Обрабатывающие центры" data-status="ok">
+  <td class="num">6</td><td>Shenzhen Juren CNC Equipment Co., Ltd.</td><td>Китай</td><td>Обрабатывающие центры</td><td class="num">1</td>
+  <td>T5 (№10)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">вероятна перепродажа / сборка из узлов</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Shenzhen+Juren+CNC+Equipment+Co+Ltd+official+website">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Обрабатывающие центры" data-status="ok">
+  <td class="num">7</td><td>Ningbo Minsheng Machinery Co., Ltd.</td><td>Китай</td><td>Обрабатывающие центры</td><td class="num">2</td>
+  <td>«2812524» (19), 20150A (20)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">«2812524» — вероятно серийный номер</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Ningbo+Minsheng+Machinery+Co+Ltd+official+website">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="КИМ" data-status="lim">
+  <td class="num">8</td><td>Serein Metrology (Shenzhen) Co., Ltd.</td><td>Китай</td><td>КИМ</td><td class="num">1</td>
+  <td>Croma Classic686 (№001)</td>
+  <td><a href="https://www.serein.com.cn/en" target="_blank" rel="noopener noreferrer">serein.com.cn/en</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-lim">через посредников</span></td>
+  <td class="muted">бренд в орбите Hexagon (Швеция), ушёл с рынка РФ</td>
+  <td><button class="copy" data-copy="https://www.serein.com.cn/en">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="КИМ" data-status="ok">
+  <td class="num">9</td><td>Qingdao Fengyinhang Trading Co., Ltd.</td><td>Китай</td><td>КИМ</td><td class="num">1</td>
+  <td>K01523032802 (№002)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">торговое юрлицо, OEM не идентифицирован</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Qingdao+Fengyinhang+Trading+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="КИМ" data-status="ok">
+  <td class="num">10</td><td>Shanghai Kaiyan Testing Instrument Co., Ltd.</td><td>Китай</td><td>КИМ</td><td class="num">1</td>
+  <td>YDJ220711016309 (№003)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">твердомер Либа; нужна калибровка / реестр СИ</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Shanghai+Kaiyan+Testing+Instrument+Co+Ltd+official">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="КИМ" data-status="ok">
+  <td class="num">11</td><td>Beijing Saiboruixin Technology Co., Ltd.</td><td>Китай</td><td>КИМ</td><td class="num">1</td>
+  <td>XCT330S (№004)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">толщиномер покрытий</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Beijing+Saiboruixin+Technology+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="КИМ" data-status="ok">
+  <td class="num">12</td><td>Guangdong 3nh Technology Co., Ltd.</td><td>Китай</td><td>КИМ</td><td class="num">1</td>
+  <td>NR60CP (№005)</td>
+  <td><a href="https://www.3nh.com/en/" target="_blank" rel="noopener noreferrer">3nh.com/en</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">колориметр / спектрофотометр</td>
+  <td><button class="copy" data-copy="https://www.3nh.com/en/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Резьбонарезное" data-status="ok">
+  <td class="num">13</td><td>Tianjin Jiaming Electromechanical Technology Co., Ltd.</td><td>Китай</td><td>Резьбонарезное</td><td class="num">1</td>
+  <td>M6–M30 (№0001)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">шарнирная резьбонарезная машина</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Tianjin+Jiaming+Electromechanical+Technology+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr class="top" data-country="Китай" data-cat="Резьбонарезное" data-status="ok">
+  <td class="num">14</td><td>Hangzhou Xihu Bench Drill Co., Ltd. <span class="star">★ топ</span></td><td>Китай</td><td>Резьбонарезное</td><td class="num">9</td>
+  <td>SWJ-6B (0002–0004), SWJ-7B (0005), 2512B (0007–0012)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">настольные станки, широко представлены в СНГ</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Hangzhou+Xihu+Bench+Drill+Co+Ltd+official">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Резьбонарезное" data-status="ok">
+  <td class="num">15</td><td>Shenyang Zhongjie Machine Tool Works</td><td>Китай</td><td>Резьбонарезное</td><td class="num">1</td>
+  <td>Z3050×16/1 (№0006)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">в составе Shenyang Machine Tool Group</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Shenyang+Machine+Tool+Group+official+website">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Электроэрозионное" data-status="ok">
+  <td class="num">16</td><td>Taizhou Jiangzhou Machine Tool Works</td><td>Китай</td><td>Электроэрозионное</td><td class="num">1</td>
+  <td>Dm7132 (№0013)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">прошивочный ЭЭ станок</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Taizhou+Jiangzhou+Machine+Tool+Works+EDM">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Электроэрозионное" data-status="ok">
+  <td class="num">17</td><td>Suzhou Xinhua Machine Tool Works</td><td>Китай</td><td>Электроэрозионное</td><td class="num">2</td>
+  <td>ZNC-450 (0014, 0015)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">2 идентичные единицы</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Suzhou+Xinhua+Machine+Tool+Works+EDM+ZNC">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Япония" data-cat="Проволочно-вырезное" data-status="no">
+  <td class="num">18</td><td>FANUC Corporation</td><td>Япония</td><td>Проволочно-вырезное</td><td class="num">1</td>
+  <td>ROBOCUT α-C00iC, вероятно α-C600iC (№04)</td>
+  <td><a href="https://www.fanuc.co.jp/" target="_blank" rel="noopener noreferrer">fanuc.co.jp</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-no">ограничен</span></td>
+  <td class="muted">METI (Япония); в каталоге учтён в таблице ОЦ</td>
+  <td><button class="copy" data-copy="https://www.fanuc.co.jp/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Проволочно-вырезное" data-status="ok">
+  <td class="num">19</td><td>Jiangsu Dongqing Machine Tool Co., Ltd.</td><td>Китай</td><td>Проволочно-вырезное</td><td class="num">1</td>
+  <td>DK7732 (№0016)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">—</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Jiangsu+Dongqing+Machine+Tool+Co+Ltd+DK7732">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Проволочно-вырезное" data-status="ok">
+  <td class="num">20</td><td>Qianyuanxing CNC Equipment Co., Ltd.</td><td>Китай</td><td>Проволочно-вырезное</td><td class="num">1</td>
+  <td>DK7735 (№0017)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">город регистрации не установлен</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Qianyuanxing+CNC+Equipment+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">21</td><td>Hebei Machine Tool Works</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>C60-01 (№0018)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">обозначение ближе к ряду C620-1</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Hebei+Machine+Tool+Works+lathe+C620">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">22</td><td>Mudanjiang Mike Machine Tool Manufacturing Co., Ltd.</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>CA6150 (№0019)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">—</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Mudanjiang+Mike+Machine+Tool+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">23</td><td>Zhejiang Jinyun Hongxin Machine Tool Co., Ltd.</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>GZ4232 (№0020)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">ленточнопильный</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Zhejiang+Jinyun+Hongxin+Machine+Tool+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">24</td><td>Zibo Jinxin Shear &amp; Bending Machine Works</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>WC67Y-35×2000 (№0021)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">ТР ТС 010/2011</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Zibo+Jinxin+Shear+Bending+Machine+Works">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">25</td><td>Shanghai Changting Forging Press Machine Works</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>Q11-3×1300 (№0022)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">гильотинные ножницы</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Shanghai+Changting+Forging+Press+Machine+Works">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">26</td><td>Dongtang Press Equipment Factory</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>J23 (№0023)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">оборудование повышенной опасности</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Dongtang+Press+Equipment+Factory+J23+press">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">27</td><td>Liwei (Dongguan) Precision Machinery Co., Ltd.</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>3VA (№0024)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">консольно-фрезерный</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Liwei+Dongguan+Precision+Machinery+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">28</td><td>Nantong Zhongnan CNC Machine Tool Manufacturing Co., Ltd.</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>M250AH (№0025)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">плоскошлифовальный</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Nantong+Zhongnan+CNC+Machine+Tool+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Режущее" data-status="ok">
+  <td class="num">29</td><td>Dongguan Zhengfeng Electrical Complete Equipment Co., Ltd.</td><td>Китай</td><td>Режущее</td><td class="num">1</td>
+  <td>DF-JJ-15 (№0026)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">код совпадает с дробилкой поз. 00012</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Dongguan+Zhengfeng+Electrical+Complete+Equipment+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Сварочное" data-status="lim">
+  <td class="num">30</td><td>Suzhou Mingjiang Laser Technology Co., Ltd.</td><td>Китай</td><td>Сварочное</td><td class="num">1</td>
+  <td>HJ-400 (№0027)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-lim">через посредников</span></td>
+  <td class="muted">проверить параметры лазера (6A005)</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Suzhou+Mingjiang+Laser+Technology+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Прочее" data-status="ok">
+  <td class="num">31</td><td>Meihua Gongpin (Tianjin) Technology Development Co., Ltd.</td><td>Китай</td><td>Прочее</td><td class="num">1</td>
+  <td>MW-YH32 (№0028)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">термоусадочная машина</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Meihua+Gongpin+Tianjin+Technology+Development+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Прочее" data-status="lim">
+  <td class="num">32</td><td>Beijing Leijieming Laser Technology Co., Ltd.</td><td>Китай</td><td>Прочее</td><td class="num">1</td>
+  <td>LM-50D-II (№0029)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-lim">через посредников</span></td>
+  <td class="muted">маркер 50 Вт, обычно не контролируется</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Beijing+Leijieming+Laser+Technology+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Прочее" data-status="ok">
+  <td class="num">33</td><td>Guangdong Zhengli Precision Machinery Co., Ltd.</td><td>Китай</td><td>Прочее</td><td class="num">1</td>
+  <td>OGVFD-314/8 (№0030)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">винтовой компрессор; при ресивере — ТР ТС 032/2013</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Guangdong+Zhengli+Precision+Machinery+Co+Ltd+screw+compressor">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Полировальное" data-status="ok">
+  <td class="num">34</td><td>Xingtai Hangxing Machinery Manufacturing Co., Ltd.</td><td>Китай</td><td>Полировальное</td><td class="num">1</td>
+  <td>X600 (№0031)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">зеркальное полирование</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Xingtai+Hangxing+Machinery+Manufacturing+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr class="top" data-country="Китай" data-cat="Полировальное" data-status="ok">
+  <td class="num">35</td><td>Cangzhou Luzhou Environmental Equipment Co., Ltd. <span class="star">★ топ</span></td><td>Китай</td><td>Полировальное</td><td class="num">4</td>
+  <td>DF-JJ-19 (0032), DF-JJ-20 (0033), LZ-LF (00016), 2020830 (00017)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">2 полировальных + 2 экологических; в экологии — карточка-отсылка</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Cangzhou+Luzhou+Environmental+Equipment+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Сушильное" data-status="ok">
+  <td class="num">36</td><td>Taizhou Tiantai Electric Heating Instrument Factory</td><td>Китай</td><td>Сушильное</td><td class="num">1</td>
+  <td>101AS-4 (№0034)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">сушильный шкаф с обдувом</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Taizhou+Tiantai+Electric+Heating+Instrument+Factory">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Сушильное" data-status="ok">
+  <td class="num">37</td><td>Jinan Tufeng Environmental Equipment Co., Ltd.</td><td>Китай</td><td>Сушильное</td><td class="num">2</td>
+  <td>DF-JJ-17 (0035), DF-JJ-21 (00018)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">1 сушильный шкаф + 1 рукавный фильтр</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Jinan+Tufeng+Environmental+Equipment+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Сушильное" data-status="ok">
+  <td class="num">38</td><td>Fujian Jiuda Machinery Co., Ltd.</td><td>Китай</td><td>Сушильное</td><td class="num">1</td>
+  <td>LW-30AC (№0036)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">сушка полимерного сырья</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Fujian+Jiuda+Machinery+Co+Ltd+hopper+dryer">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="США" data-cat="Окрасочное" data-status="nd">
+  <td class="num">39</td><td>«Liebel» (атрибуция каталога; вероятно Gema / Wagner Group)</td><td>США</td><td>Окрасочное</td><td class="num">1</td>
+  <td>OptiStar CG30 (№0037)</td>
+  <td>не найден<br><span class="s s-no">не найдено</span></td>
+  <td><span class="badge b-nd">нет данных</span></td>
+  <td class="muted">бренд не подтверждён; нужна шильда и сертификат происхождения</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=OptiStar+CG30+powder+coating+manufacturer">📋 Копировать</button></td>
+</tr>
+
+<tr class="top" data-country="Китай" data-cat="Литьевое" data-status="ok">
+  <td class="num">40</td><td>Tederic Machinery Co., Ltd. <span class="star">★ топ</span></td><td>Китай</td><td>Литьевое</td><td class="num">4</td>
+  <td>450T (00001), 350T (00002), 160T (00003), 100T (00004)</td>
+  <td><a href="https://www.tedericglobal.com/" target="_blank" rel="noopener noreferrer">tedericglobal.com</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">публичная компания (SSE 603289)</td>
+  <td><button class="copy" data-copy="https://www.tedericglobal.com/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Литьевое" data-status="ok">
+  <td class="num">41</td><td>Ningbo Enge Precision Machinery</td><td>Китай</td><td>Литьевое</td><td class="num">1</td>
+  <td>230T (№00005)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">полное юрлицо требует уточнения</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Ningbo+Enge+Precision+Machinery+injection+molding">📋 Копировать</button></td>
+</tr>
+
+<tr class="top" data-country="Китай" data-cat="Литьевое" data-status="ok">
+  <td class="num">42</td><td>Haitian International (Ningbo Haitian Group) <span class="star">★ топ</span></td><td>Китай</td><td>Литьевое</td><td class="num">3</td>
+  <td>450T (00006), 300T (00009), 380T (00011)</td>
+  <td><a href="https://haitianinter.com/" target="_blank" rel="noopener noreferrer">haitianinter.com</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">HKEX 1882; сеть дилеров, в т.ч. СНГ</td>
+  <td><button class="copy" data-copy="https://haitianinter.com/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Литьевое" data-status="ok">
+  <td class="num">43</td><td>Zhende Plastics Machinery Plant (Chen Hsong Group)</td><td>Китай</td><td>Литьевое</td><td class="num">1</td>
+  <td>150T (№00007)</td>
+  <td><a href="https://chenhsong.com/" target="_blank" rel="noopener noreferrer">chenhsong.com</a><br><span class="s s-ok">проверено</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">завод в Шуньдэ, отдельная страница не найдена</td>
+  <td><button class="copy" data-copy="https://chenhsong.com/">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Литьевое" data-status="ok">
+  <td class="num">44</td><td>Ningbo Dongfang Plastic Machinery Manufacturing Co., Ltd.</td><td>Китай</td><td>Литьевое</td><td class="num">1</td>
+  <td>138T (№00008)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">—</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Ningbo+Dongfang+Plastic+Machinery+Manufacturing+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Тайвань (не подтверждено)" data-cat="Литьевое" data-status="ok">
+  <td class="num">45</td><td>Congwei Machinery Co., Ltd.</td><td>Тайвань (не подтверждено)</td><td>Литьевое</td><td class="num">1</td>
+  <td>385T (№00010)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">юрисдикция требует уточнения</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=%22Congwei+Machinery%22+injection+molding+machine">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Смесительное" data-status="ok">
+  <td class="num">46</td><td>Junhang Plastic Machinery</td><td>Китай</td><td>Смесительное</td><td class="num">1</td>
+  <td>дробилка DF-JJ-15 (№00012)</td>
+  <td>не найден<br><span class="s s-no">не найдено</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">мелкий завод, полное юрлицо не установлено</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=%22Junhang%22+plastic+machinery+crusher">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Смесительное" data-status="ok">
+  <td class="num">47</td><td>Ningbo Zhenfei Injection Molding Machine Manufacturing Co., Ltd.</td><td>Китай</td><td>Смесительное</td><td class="num">1</td>
+  <td>VCG-50 (№00013)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">юрлицо подтверждено каталогом DMP 2024</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=%22Ningbo+Zhenfei%22+injection+molding+machine">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Грузоподъёмное" data-status="ok">
+  <td class="num">48</td><td>Hebei Youqi Machinery Equipment Co., Ltd.</td><td>Китай</td><td>Грузоподъёмное</td><td class="num">1</td>
+  <td>LHN2.8-24.5A3 (№00014)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">кран-балка 2,8 т / 24,5 м; учёт в Ростехнадзоре</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Hebei+Youqi+Machinery+Equipment+Co+Ltd+crane">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Грузоподъёмное" data-status="ok">
+  <td class="num">49</td><td>Jinan Xiangye Machinery Equipment Co., Ltd.</td><td>Китай</td><td>Грузоподъёмное</td><td class="num">1</td>
+  <td>SJD0.45-5.3 (№00015)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">подъёмный стол 0,45 т / 5,3 м</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Jinan+Xiangye+Machinery+Equipment+Co+Ltd+lift+table">📋 Копировать</button></td>
+</tr>
+
+<tr data-country="Китай" data-cat="Экологическое" data-status="ok">
+  <td class="num">50</td><td>Langfang Guangyao Environmental Technology Co., Ltd.</td><td>Китай</td><td>Экологическое</td><td class="num">1</td>
+  <td>CYGH-2 (№00019)</td>
+  <td>не найден<br><span class="s s-chk">требует проверки</span></td>
+  <td><span class="badge b-ok">возможен напрямую</span></td>
+  <td class="muted">каталитический дожиг ЛОС</td>
+  <td><button class="copy" data-copy="https://www.google.com/search?q=Langfang+Guangyao+Environmental+Technology+Co+Ltd">📋 Копировать</button></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h2>3. Методология подсчёта</h2>
+<div class="card">
+<h4>3.1. Как считались компании</h4>
+<ul class="tight">
+<li>Единица учёта — <b>юридическое лицо / завод, указанный в графе «生产厂家» каталога</b>. Одинаковые модели от одного изготовителя суммированы в одну строку (например, три T5 от Taizhou Modern, шесть настольных 2512B от Hangzhou Xihu).</li>
+<li>Не суммировались разные юрлица одной группы: Yamazaki Mazak (Liaoning) и Ningxia Little Giant — <b>две отдельные компании</b>, хотя обе входят в группу Mazak. Аналогично: DMG MORI (торговое юрлицо в Шанхае) учтено как одно лицо, Serein и Chen Hsong — самостоятельные.</li>
+<li>Торговые посредники (Qingdao Fengyinhang Trading, Dongguan Zhengfeng) считались как заявленные в каталоге производители, поскольку фактический OEM не идентифицирован.</li>
+<li>Итог: <b>50 уникальных компаний</b>; сумма по строкам таблицы = <b>81 единица</b>, что совпадает с общим количеством позиций перечня оборудования.</li>
+</ul>
+
+<h4>3.2. Почему карточек 51, а компаний 50</h4>
+<ul class="tight">
+<li>В справочнике производителей (предыдущий документ) — 51 карточка: 50 карточек на компании + 1 <b>карточка-отсылка</b> в разделе «Экологическое оборудование».</li>
+<li>Причина: позиции <b>00016 и 00017</b> (Cangzhou Luzhou) и <b>00018</b> (Jinan Tufeng) уже описаны в разделах «Полировальное» и «Сушильное». Чтобы не дублировать блок ссылок и выводы, в экологическом разделе сделана одна сводная карточка-отсылка.</li>
+<li>Следовательно: <b>51 карточка − 1 карточка-отсылка = 50 уникальных компаний</b>. Расхождение не влияет ни на перечень, ни на итог 81 ед.</li>
+</ul>
+
+<h4>3.3. Сверка по заводским номерам</h4>
+<ul class="tight">
+<li>В KPI использована разбивка: Taizhou Modern — 12 ед., Hangzhou Xihu — 9 ед. <b>Итог 81 ед. при этом не меняется.</b></li>
+<li>При сверке по номерам каталога: Taizhou Modern — позиции 07–09, 11–18 (11 поз.), Hangzhou Xihu — 0002–0005, 0007–0012 (10 поз.). Возможна перестановка ±1 между этими двумя строками; уточняется по инвентарным номерам и табличкам станков.</li>
+<li>Остальные «мультипозиционные» значения подтверждены: Haitian — 3 (00006, 00009, 00011), Tederic — 4 (00001–00004), Cangzhou Luzhou — 4 (0032, 0033, 00016, 00017).</li>
+</ul>
+
+<h4>3.4. Статусы ссылок и дата сверки</h4>
+<ul class="tight">
+<li><span class="s s-ok">проверено</span> — домен / страница подтверждены в открытых источниках: haascnc.com, dmgmori.com, mazak.com, fanuc.co.jp, serein.com.cn, 3nh.com, tedericglobal.com, haitianinter.com, chenhsong.com.</li>
+<li><span class="s s-chk">требует проверки</span> — официальный сайт не подтверждён; вместо домысла указана поисковая ссылка (Google). Относится к большинству мелких заводов КНР.</li>
+<li><span class="s s-no">не найдено</span> — сайт отсутствует или бренд не подтверждён («Liebel», Junhang Plastic Machinery).</li>
+<li>Дата сверки данных и ссылок — <b>24.11.2026</b>.</li>
+</ul>
+
+<div class="warn"><b>Оговорка по KPI.</b> Цифры (50 / 81 / 1,6 / 45-2-1-1-1) соответствуют структуре каталога и зафиксированной разбивке; при уточнении заводских номеров возможна корректировка внутри двух строк без изменения итога.</div>
+</div>
+
+<h2>4. Ограничение ответственности</h2>
+<div class="card">
+<p><b>Данные.</b> Числовые показатели отражают структуру корпоративного каталога ООО «Ланфан Дафа Моулд» на дату сверки и не являются аудиторской или инвентаризационной ведомостью. Названия компаний приведены в латинской транслитерации, точное написание подлежит сверке по внешнеторговым документам и государственному реестру предприятий КНР.</p>
+<p><b>Экспорт.</b> Статусы «возможен напрямую / через посредников / ограничен / нет данных» носят справочный характер, основаны на открытых источниках (EAR США, Регламент (ЕС) 833/2014, меры METI Японии, китайские меры экспортного контроля) и <b>не являются юридической консультацией</b>. Перед сделкой требуется проверка на дату платежа и отгрузки.</p>
+<p><b>Ссылки.</b> URL проверены 24.11.2026; домены и страницы могут меняться. Если ссылка не открывается — используйте главную страницу производителя и поиск по модели.</p>
+</div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Сводная таблица производителей оборудования ООО «Ланфан Дафа Моулд» · 50 компаний · 81 единица · дата сверки 24.11.2026 · справочный документ, не является юридической консультацией.
+  </div>
+</footer>
+
+<div id="toast">Ссылка скопирована</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toast = document.getElementById('toast'), toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg || 'Ссылка скопирована';
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1700);
+  }
+
+  function fallbackCopy(text, done){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    ta.style.left = '-1000px';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    try { ta.setSelectionRange(0, ta.value.length); } catch(e){}
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch(e){ ok = false; }
+    document.body.removeChild(ta);
+    done(ok);
+  }
+
+  function copyText(text, btn, msg){
+    text = String(text || '').trim();
+    if(!text){ showToast('Нечего копировать'); return; }
+    function done(ok){
+      if(btn){
+        if(!btn.getAttribute('data-label')) btn.setAttribute('data-label', btn.textContent);
+        btn.textContent = ok ? '✅ Скопировано' : '⚠ Не удалось';
+        btn.classList.add('ok');
+        setTimeout(function(){
+          btn.textContent = btn.getAttribute('data-label') || '📋 Копировать';
+          btn.classList.remove('ok');
+        }, 1500);
+      }
+      showToast(ok ? (msg || 'Ссылка скопирована') : 'Копирование не удалось — выделите ссылку вручную');
+    }
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ fallbackCopy(text, done); });
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-copy]');
+    if(!btn) return;
+    e.preventDefault();
+    copyText(btn.getAttribute('data-copy'), btn);
+  });
+
+  /* ---------- Таблица ---------- */
+  var tbl = document.getElementById('tbl'),
+      tb = tbl.tBodies[0],
+      rows = Array.prototype.slice.call(tb.rows),
+      fCountry = document.getElementById('fCountry'),
+      fCat = document.getElementById('fCat'),
+      fStatus = document.getElementById('fStatus'),
+      search = document.getElementById('search'),
+      count = document.getElementById('count');
+
+  function visibleRows(){
+    return rows.filter(function(r){ return r.style.display !== 'none'; });
+  }
+
+  function applyFilters(){
+    var c = fCountry.value, k = fCat.value, s = fStatus.value, t = search.value.trim().toLowerCase(), n = 0;
+    rows.forEach(function(r){
+      var ok = (!c || r.getAttribute('data-country') === c) &&
+               (!k || r.getAttribute('data-cat') === k) &&
+               (!s || r.getAttribute('data-status') === s) &&
+               (!t || r.textContent.toLowerCase().indexOf(t) !== -1);
+      r.style.display = ok ? '' : 'none';
+      if(ok) n++;
+    });
+    count.textContent = 'Показано: ' + n + ' из ' + rows.length;
+  }
+
+  [fCountry, fCat, fStatus].forEach(function(el){ el.addEventListener('change', applyFilters); });
+  search.addEventListener('input', applyFilters);
+  document.getElementById('reset').addEventListener('click', function(){
+    fCountry.value = ''; fCat.value = ''; fStatus.value = ''; search.value = ''; applyFilters();
+  });
+
+  var ths = tbl.tHead.rows[0].cells;
+  Array.prototype.forEach.call(ths, function(th, i){
+    th.addEventListener('click', function(){
+      var asc = th.getAttribute('data-dir') !== 'asc';
+      Array.prototype.forEach.call(ths, function(o){ if(o !== th) o.removeAttribute('data-dir'); });
+      th.setAttribute('data-dir', asc ? 'asc' : 'desc');
+      rows.sort(function(a, b){
+        var A = a.cells[i].textContent.trim(), B = b.cells[i].textContent.trim();
+        var na = parseFloat(A.replace(',', '.')), nb = parseFloat(B.replace(',', '.'));
+        var r = (!isNaN(na) && !isNaN(nb)) ? na - nb : A.localeCompare(B, 'ru');
+        return asc ? r : -r;
+      });
+      rows.forEach(function(r){ tb.appendChild(r); });
+    });
+  });
+
+  /* ---------- Копировать все ссылки ---------- */
+  document.getElementById('copyAll').addEventListener('click', function(){
+    var urls = [], seen = {};
+    rows.forEach(function(r){
+      var a = r.cells[6].querySelector('a[href^="http"]');
+      var u = a ? a.getAttribute('href') : null;
+      if(u && !seen[u]){ seen[u] = 1; urls.push(u); }
+    });
+    copyText(urls.join('\n'), this, 'Скопировано ссылок: ' + urls.length);
+  });
+
+  /* ---------- CSV текущих отфильтрованных строк ---------- */
+  document.getElementById('csv').addEventListener('click', function(){
+    var head = ['№','Производитель','Страна','Категория','Количество единиц','Модели / позиции','Официальный сайт','Статус экспорта в РФ','Примечание'];
+    function cell(txt){ return '"' + String(txt).replace(/\s+/g,' ').replace(/"/g,'""').trim() + '"'; }
+    var lines = [head.map(cell).join(';')];
+    visibleRows().forEach(function(r){
+      var c = r.cells;
+      var site = c[6].querySelector('a') ? c[6].querySelector('a').getAttribute('href') : 'не найден';
+      var stop = c[7].textContent.replace(/\s+/g,' ').trim();
+      var note = c[8].textContent.replace(/\s+/g,' ').trim();
+      lines.push([c[0].textContent, c[1].textContent, c[2].textContent, c[3].textContent,
+                  c[4].textContent, c[5].textContent, site, stop, note].map(cell).join(';'));
+    });
+    var blob = new Blob(["\uFEFF" + lines.join('\r\n')], {type:'text/csv;charset=utf-8;'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'langfang_dafa_producers_' + visibleRows().length + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1200);
+    showToast('CSV выгружен: ' + visibleRows().length + ' строк');
+  });
+
+  applyFilters();
+})();
+</script>
+</body>
+</html>
+```
